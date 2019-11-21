@@ -1,0 +1,28 @@
+{
+  "name": "ESR",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier -c --write \"**/*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^3.25.2",
+    "qs": "^6.9.1",
+    "umi-request": "^1.2.10"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/lodash": "^4.14.149",
+    "@types/qs": "^6.5.3",
+    "@umijs/fabric": "^1.2.0",
+    "eslint": "^6.6.0",
+    "express": "^4.17.1",
+    "mockjs": "^1.1.0",
+    "prettier": "^1.19.1"
+  }
+}
