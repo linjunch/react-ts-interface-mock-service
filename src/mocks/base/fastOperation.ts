@@ -46,7 +46,7 @@ const memberDetail = (req: Request, res: Response) => {
           imageUrl: '@string',
           name: '@string',
           nameEn: '@string',
-          sex: '@string',
+          "sex| 1": [0, 1],
           birthday: '@string',
           cellphone: '@string',
           cellphoneNotice: true,
@@ -149,7 +149,7 @@ const memberLike = (req: Request, res: Response) => {
     if (defaultView) {
       res.send(
         mockjs.mock({
-          defaultView: 'SS',
+          defaultView,
         }),
       );
     }

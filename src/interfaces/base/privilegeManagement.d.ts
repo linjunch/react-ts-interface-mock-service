@@ -1,4 +1,4 @@
-import { CompanyType, DefaultView, Status, Sort } from '../global';
+import { CompanyType, DefaultViewType, StatusType, SortType,SexType } from '../global';
 
 // public：角色列表接口
 export interface LevelListType {
@@ -10,9 +10,9 @@ export interface LevelListType {
 export interface RolesListParamsType {
   companyType: CompanyType;
   roleName?: string;
-  status?: Exclude<Status, 'deleted'>;
+  status?: Exclude<StatusType, 'deleted'>;
   direction?: boolean;
-  sort?: Sort;
+  sort?: SortType;
   page?: number;
   size?: number;
 }
@@ -22,7 +22,7 @@ export interface RolesListResType {
   roleName?: string;
   isRoot?: boolean;
   insDate?: string;
-  status?: Exclude<Status, 'all'>;
+  status?: Exclude<StatusType, 'all'>;
 }
 
 // 角色详情接口
@@ -39,7 +39,7 @@ export interface RolesDetailResType {
   insDate?: string;
   sort?: number;
   isRoot?: boolean;
-  status?: Exclude<Status, 'all'>;
+  status?: Exclude<StatusType, 'all'>;
 }
 
 // 角色创建接口
@@ -79,31 +79,31 @@ export interface ChangeRoleResType {
 export interface RoleStateParamsType {
   companyType: CompanyType;
   roleToken: number;
-  val: Exclude<Status, 'all'>;
+  val: Exclude<StatusType, 'all'>;
 }
 
 export interface RoleStateResType {
   token: string;
 }
 
-// piblic:管理员信息表单
+// public:管理员信息表单
 export interface AdminFormType {
   account: string;
   password: string;
   name: string;
   imageUrl?: string;
-  sex: number;
+  sex: SexType;
   birthday?: string;
   cellphone: string;
   cellphoneNotice?: boolean;
   email?: string;
   emailNotice?: boolean;
-  defaultView?: Extract<DefaultView, 'SS' | 'SA'>;
+  defaultView?: Extract<DefaultViewType, 'SS' | 'SA'>;
   nameEn?: string;
   qq?: string;
   position?: string;
   roleId?: number;
-  status?: Exclude<Status, 'all'>;
+  status?: Exclude<StatusType, 'all'>;
 }
 
 // 管理员列表接口
@@ -113,9 +113,9 @@ export interface AdminListParamsType {
   name?: string;
   insDateL?: string;
   insDateU?: string;
-  status?: Exclude<Status, 'deleted'>;
+  status?: Exclude<StatusType, 'deleted'>;
   direction?: boolean;
-  sort?: Sort;
+  sort?: SortType;
   page?: number;
   size?: number;
 }
@@ -127,7 +127,7 @@ export interface AdminListResType {
   nameEn?: string;
   cellphone?: string;
   position?: string;
-  status?: Exclude<Status, 'deleted'>;
+  status?: Exclude<StatusType, 'deleted'>;
 }
 
 // 管理员详情接口
@@ -140,15 +140,15 @@ export interface AdminDetailResType {
   account?: string;
   name?: string;
   imageUrl?: string;
-  sex?: number;
+  sex?: SexType;
   birthday?: string;
   cellphone?: string;
   cellphoneNotice?: boolean;
   email?: string;
   emailNotice?: boolean;
-  defaultView: Extract<DefaultView, 'SS' | 'SA'>;
+  defaultView: Extract<DefaultViewType, 'SS' | 'SA'>;
   insUser?: string;
-  insDate?: number;
+  insDate?: string;
   loginDate?: string;
   loginTimes?: number;
   loginIp?: string;
@@ -158,8 +158,8 @@ export interface AdminDetailResType {
   nameEn?: string;
   qq?: string;
   position?: string;
-  naroleIdme?: number;
-  status?: Exclude<Status, 'all'>;
+  roleId?: number;
+  status?: Exclude<StatusType, 'all'>;
 }
 
 // 管理员创建接口
@@ -194,7 +194,7 @@ export interface ChangeAdminResType {
 export interface AdminStateParamsType {
   companyType: CompanyType;
   managerToken: number;
-  val: Exclude<Status, 'all'>;
+  val: Exclude<StatusType, 'all'>;
 }
 
 export interface AdminStateResType{
