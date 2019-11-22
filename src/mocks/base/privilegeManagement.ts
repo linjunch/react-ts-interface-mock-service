@@ -73,7 +73,7 @@ const roleChange = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: roleToken,
       }),
     );
   }
@@ -86,7 +86,7 @@ const roleState = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: roleToken,
       }),
     );
   }
@@ -176,7 +176,7 @@ const adminChange = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: managerToken,
       }),
     );
   }
@@ -189,7 +189,7 @@ const adminState = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: managerToken,
       }),
     );
   }
@@ -204,6 +204,6 @@ export default {
   'GET /api/:companyType/admin/managers': adminList,
   'GET /api/:companyType/admin/manager/:managerToken/detail': adminDetail,
   'POST /api/:companyType/admin/manager': adminCreate,
-  'POST /api/:companyType:/admin/manager/:managerToken': adminChange,
+  'POST /api/:companyType/admin/manager/:managerToken': adminChange,
   'PUT /api/:companyType/admin/manager/:managerToken/state': adminState,
 };

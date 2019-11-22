@@ -1,4 +1,4 @@
-import { CompanyType, RecordType, SourceType, DefaultView } from '../global';
+import { CompanyType, RecordType, SourceType, DefaultViewType } from '../global';
 
 // 登录接口
 export interface LoginParamsType {
@@ -64,10 +64,10 @@ export interface MemberDetailResType {
 // 密码修改接口
 export interface ChangePasswordParamsType {
   companyType: CompanyType;
-  form: ChangePasswordPFormType;
+  form: ChangePasswordFormType;
 }
 
-export interface ChangePasswordPFormType {
+export interface ChangePasswordFormType {
   password: string;
 }
 
@@ -121,15 +121,15 @@ export interface EmailBindingFormType {
 export interface EmailBindingResType extends EmailBindingFormType {}
 
 // 偏好设置接口
-export interface MemberlikeParamsType {
+export interface MemberLikeParamsType {
   companyType: CompanyType;
-  form: MemberlikeFormType;
+  form: MemberLikeFormType;
 }
 
-export interface MemberlikeFormType {
-  defaultView: DefaultView;
+export interface MemberLikeFormType {
+  defaultView: DefaultViewType;
 }
 
-export interface MemberlikeResType {
-  defaultView: Extract<DefaultView, 'SS' | 'SA'>;
+export interface MemberLikeResType {
+  defaultView: Extract<DefaultViewType, 'SS' | 'SA'>;
 }
