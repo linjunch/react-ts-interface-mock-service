@@ -197,13 +197,13 @@ const adminState = (req: Request, res: Response) => {
 
 export default {
   'GET /api/:companyType/admin/roles': roleList,
-  'GET /:companyType/admin/role/:roleToken/detail': roleDetail,
-  'POST /:companyType/admin/role': roleCreate,
-  'PUT /:companyType/admin/role/:roleToken': roleChange,
-  'PUT /:companyType/admin/role/:roleToken:/state': roleState,
-  'GET /;companyType/admin/managers': adminList,
-  'GET /:companyType/admin/manager/:managerToken/detail': adminDetail,
-  'POST /:companyType/admin/manager': adminCreate,
-  'POST /:companyType:/admin/manager/:managerToken': adminChange,
-  'PUT /:companyType/admin/manager/:managerToken/state': adminState,
+  'GET /api/:companyType/admin/role/:roleToken/detail': roleDetail,
+  'POST /api/:companyType/admin/role': roleCreate,
+  'PUT /api/:companyType/admin/role/:roleToken': roleChange,
+  'PUT /api/:companyType/admin/role/:roleToken:/state': roleState,
+  'GET /api/:companyType/admin/managers': adminList,
+  'GET /api/:companyType/admin/manager/:managerToken/detail': adminDetail,
+  'POST /api/:companyType/admin/manager': adminCreate,
+  'POST /api/:companyType:/admin/manager/:managerToken': adminChange,
+  'PUT /api/:companyType/admin/manager/:managerToken/state': adminState,
 };

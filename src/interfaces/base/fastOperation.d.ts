@@ -129,6 +129,7 @@ export interface MemberlikeParamsType {
 export interface MemberlikeFormType {
   defaultView: DefaultView;
 }
+
 export interface MemberlikeResType {
   defaultView: Extract<DefaultView, 'SS' | 'SA'>;
 }
