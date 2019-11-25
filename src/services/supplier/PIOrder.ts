@@ -22,14 +22,6 @@ export async function OrderList(params: OrderListParamsType) {
   return request(`/api/supplier/sales/orders?${stringify(params)}`);
 }
 
-OrderList({piCode: 'string',
-  tradeName: 'string',
-  ownerName: 'string',
-  factoryName: 'string',
-  piDateL: 'string',
-  piDateU: 'string',
-})
-
 // 订单详情接口
 export async function OrderDetail(params: OrderDetailParamsType) {
   const { orderToken } = params;
