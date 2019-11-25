@@ -7,7 +7,7 @@ export interface LevelListType {
 }
 
 // 角色列表接口
-export interface RolesListParamsType {
+export interface RoleListParamsType {
   companyType: CompanyType;
   roleName?: string;
   status?: Exclude<StatusType, 'deleted'>;
@@ -17,7 +17,7 @@ export interface RolesListParamsType {
   size?: number;
 }
 
-export interface RolesListResType {
+export interface RoleListResType {
   id?: string;
   roleName?: string;
   isRoot?: boolean;
@@ -26,12 +26,12 @@ export interface RolesListResType {
 }
 
 // 角色详情接口
-export interface RolesDetailParamsType {
+export interface RoleDetailParamsType {
   companyType: CompanyType;
   roleToken: number;
 }
 
-export interface RolesDetailResType {
+export interface RoleDetailResType {
   id?: string;
   roleName?: string;
   levels?: LevelListType;
@@ -43,35 +43,35 @@ export interface RolesDetailResType {
 }
 
 // 角色创建接口
-export interface RolesCreateParamsType {
+export interface RoleCreateParamsType {
   companyType: CompanyType;
   role: RolesCreateFormType;
 }
 
-export interface RolesCreateFormType {
+export interface RoleCreateFormType {
   roleName: string;
   sort: number;
   levels: LevelListType;
 }
 
-export interface RolesCreateResType {
+export interface RoleCreateResType {
   token?: string;
 }
 
 // 角色修改接口
-export interface ChangeRoleParamsType {
+export interface RoleChangeParamsType {
   companyType: CompanyType;
   roleToken: number;
-  role: ChangeRoleFormType;
+  role: RoleChangeFormType;
 }
 
-export interface ChangeRoleFormType {
+export interface RoleChangeFormType {
   roleName?: string;
   sort?: number;
   levels: LevelListType;
 }
 
-export interface ChangeRoleResType {
+export interface RoleChangeResType {
   token?: string;
 }
 
@@ -174,19 +174,19 @@ export interface AdminCreateResType {
 }
 
 // 管理员修改接口
-export interface ChangeAdminParamsType {
+export interface AdminChangeParamsType {
   companyType: CompanyType;
   managerToken: number;
-  manager: ChangeAdminFormType;
+  manager: AdminChangeFormType;
 }
 
-export interface ChangeAdminFormType {
+export interface AdminChangeFormType {
   companyType: CompanyType;
   managerToken: number;
   manager: AdminFormType;
 }
 
-export interface ChangeAdminResType {
+export interface AdminChangeResType {
   token?: string;
 }
 

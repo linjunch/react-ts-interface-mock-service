@@ -5,10 +5,47 @@ import {
   StepType,
   ServiceType,
   AgentType,
-  DictionaryType,
   SizeType,
   PackingType,
 } from '../global';
+
+import { PickRequired, PickPartial } from '../utils';
+// public：订单信息接口
+export interface ContainerListType {
+  no: number;
+  size: SizeType;
+  count: number;
+  weight: number;
+}
+
+export interface OrderFormType {
+  piCode: string;
+  piDate: string;
+  buyer: string;
+  buyerAddr: string;
+  tradeCode: string;
+  tradeName: string;
+  ownerCode: string;
+  ownerName: string;
+  contractCode: string;
+  remark?: string;
+  trafMode: string;
+  iePort: string;
+  cusPort: string;
+  transMode: string;
+  currency: string;
+  tradeCountry: string;
+  tradeArea: string;
+  lcMode: string;
+  lcModeOther?: string;
+  wrapType: string;
+  volume?: number;
+  netWet: number;
+  containerList?: Array<ContainerListType>;
+  deliveryDate: string;
+  piFile?: string;
+  isCusSplit?: boolean;
+}
 
 // 订单列表接口
 interface OrderListParamsType {
@@ -37,7 +74,7 @@ export interface OrderListResType {
   insDate?: string;
   isLock?: boolean;
   status?: Exclude<StatusType, 'all'>;
-  step?: stepType;
+  step?: StepType;
 }
 
 // 订单详情接口
@@ -64,22 +101,22 @@ export interface OrderDetailResType {
   agentMark?: string;
   contractCode?: string;
   remark?: string;
-  trafMode?: DictionaryType;
+  trafMode?: string;
   trafModeOther?: string;
-  iePort?: DictionaryType;
-  cusPort?: DictionaryType;
-  transMode?: DictionaryType;
+  iePort?: string;
+  cusPort?: string;
+  transMode?: string;
   transModeOther?: string;
-  currency?: DictionaryType;
-  tradeCountry?: DictionaryType;
-  tradeArea?: DictionaryType;
-  lcMode?: DictionaryType;
+  currency?: string;
+  tradeCountry?: string;
+  tradeArea?: string;
+  lcMode?: string;
   lcModeOther?: string;
-  wrapType?: DictionaryType;
+  wrapType?: string;
   volume?: number;
   netWet?: number;
   mark?: string;
-  containerList?: ContainerListType;
+  containerList?: Partial<ContainerListType>;
   deliveryDate?: string;
   piFile?: string;
   isCusSplit?: boolean;
@@ -88,59 +125,16 @@ export interface OrderDetailResType {
   isShipping?: boolean;
   insUser?: string;
   createDate?: string;
-  createDate?: boolean;
+  isLock?: boolean;
   status?: StatusType;
   step?: StepType;
-}
-
-export interface OrderDetailContainerListType {
-  no?: number;
-  size?: SizeType;
-  count?: number;
-  weight?: number;
-}
-
-// public：订单信息接口
-export interface OrderElemType {
-  piCode: string;
-  piDate: string;
-  buyer: string;
-  buyerAddr: string;
-  tradeCode: string;
-  tradeName: string;
-  ownerCode: string;
-  ownerName: string;
-  contractCode: string;
-  remark?: string;
-  trafMode: DictionaryType;
-  iePort: DictionaryType;
-  cusPort: DictionaryType;
-  transMode: DictionaryType;
-  currency: DictionaryType;
-  trade_Country: DictionaryType;
-  tradeAreaCode: DictionaryType;
-  lcMode: DictionaryType;
-  lcModeOther?: string;
-  wrapType: DictionaryType;
-  volume?: number;
-  netWet: number;
-  containerList?: ContainerElemType;
-  deliveryDate: string;
-  piFile?: string;
-  isCusSplit?: boolean;
-}
-
-export interface ContainerElemType {
-  no: number;
-  size: SizeType;
-  count: number;
-  weight?: number;
 }
 
 // 订单创建接口
 export interface OrderCreateParamsType {
   submit: boolean;
-  order: OrderElemType;
+  order: Record<'containerList', Array<PickPartial<ContainerListType, 'weight'>>> &
+    Omit<OrderFormType, 'containerList'>;
 }
 
 export interface OrderCreateResType {
@@ -151,7 +145,8 @@ export interface OrderCreateResType {
 export interface OrderChangeParamsType {
   orderToken: string;
   submit: boolean;
-  order: OrderElemType;
+  order: Record<'containerList', Array<PickPartial<ContainerListType, 'weight'>>> &
+  Omit<OrderFormType, 'containerList'>;
 }
 
 export interface OrderChangeResType {
@@ -191,7 +186,7 @@ export interface GoodsListResType {
   model?: string;
   imgUrl?: string;
   dealQty: number;
-  dealUnit: DictionaryType;
+  dealUnit: string;
   dealPrice: number;
   dealAmount: number;
 }
@@ -268,9 +263,9 @@ export interface ContainerListGoodsListType {
   name?: string;
   model?: string;
   dealQty?: number;
-  dealUnit?: DictionaryType;
+  dealUnit?: string;
   pkgsQty?: number;
-  pkgsUnit?: DictionaryType;
+  pkgsUnit?: string;
   trayQty?: number;
   grossWet?: number;
   NetWet?: number;
@@ -297,9 +292,9 @@ export interface GoodsListType {
   name: string;
   model: string;
   dealQty: number;
-  dealUnit: DictionaryType;
+  dealUnit: string;
   pkgsQty: number;
-  pkgsUnit: DictionaryType;
+  pkgsUnit: string;
   trayQty?: number;
   grossWet: number;
   NetWet: number;

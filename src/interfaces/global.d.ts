@@ -9,6 +9,5 @@ export type SexType = 0 | 1;
 export type StepType = 'all' | 'draft' | 'send' | 'accept' | 'reject' | 'container' | 'return' | 'check' | 'pass' | 'refuse';
 export type ServiceType = 'DeclareService' | 'TraditionService' | 'NewService' ;
 export type AgentType = 'ESRDeclare' | 'OtherDeclare';
-export type DictionaryType = 'dictionary';
 export type SizeType = '20GP' | '40GP' | '40HQ' | '45HQ' | '散货';
 export type PackingType = 'packing';

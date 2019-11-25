@@ -1,32 +1,32 @@
 import request from '@/utils/request';
 import { stringify } from 'qs';
 import {
-  RolesListParamsType,
-  RolesDetailParamsType,
-  RolesCreateParamsType,
-  ChangeRoleParamsType,
+  RoleListParamsType,
+  RoleDetailParamsType,
+  RoleCreateParamsType,
+  RoleChangeParamsType,
   RoleStateParamsType,
   AdminListParamsType,
   AdminDetailParamsType,
   AdminCreateParamsType,
-  ChangeAdminParamsType,
+  AdminChangeParamsType,
   AdminStateParamsType,
 } from '@/interfaces/base';
 
 // 角色列表接口
-export async function RolesList(params: RolesListParamsType) {
+export async function RolesList(params: RoleListParamsType) {
   const { companyType, ...query } = params;
   return request(`/api/${companyType}/admin/roles?${stringify(query)}`);
 }
 
 // 角色详情接口
-export async function RolesDetai(params: RolesDetailParamsType) {
+export async function RolesDetai(params: RoleDetailParamsType) {
   const { companyType, roleToken } = params;
   return request(`/api/${companyType}/admin/role/${roleToken}/detail`);
 }
 
 // 角色创建接口
-export async function RolesCreate(params: RolesCreateParamsType) {
+export async function RolesCreate(params: RoleCreateParamsType) {
   const { companyType, role } = params;
   return request(`/api/${companyType}/admin/role`, {
     method: 'POST',
@@ -35,7 +35,7 @@ export async function RolesCreate(params: RolesCreateParamsType) {
 }
 
 // 角色修改接口
-export async function ChangeRole(params: ChangeRoleParamsType) {
+export async function ChangeRole(params: RoleChangeParamsType) {
   const { companyType, roleToken, role } = params;
   return request(`/api/${companyType}/admin/role/${roleToken}`, {
     method: 'PUT',
@@ -72,7 +72,7 @@ export async function AdminCreate(params: AdminCreateParamsType) {
 }
 
 // 管理员修改接口
-export async function ChangeAdmin(params: ChangeAdminParamsType) {
+export async function ChangeAdmin(params: AdminChangeParamsType) {
   const { companyType, managerToken, manager } = params;
   return request(`/api/${companyType}/admin/manager/${managerToken}`, {
     method: 'POST',

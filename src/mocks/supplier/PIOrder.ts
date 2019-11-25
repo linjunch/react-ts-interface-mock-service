@@ -57,7 +57,7 @@ const orderDetail = (req: Request, res: Response) => {
           transModeOther: '@string',
           currency: '@string',
           tradeCountry: '@string',
-          tradeAreaCode: '@string',
+          tradeArea: '@string',
           lcMode: '@string',
           lcModeOther: '@string',
           wrapType: '@string',
@@ -90,29 +90,31 @@ const orderDetail = (req: Request, res: Response) => {
 };
 
 const orderCreate = (req: Request, res: Response) => {
-  const { submit } = req.query;
   const {
-    piCode,
-    piDate,
-    buyer,
-    buyerAddr,
-    tradeCode,
-    tradeName,
-    ownerCode,
-    ownerName,
-    contractCode,
-    trafMode,
-    iePort,
-    cusPort,
-    transMode,
-    currency,
-    trade_Country,
-    tradeAreaCode,
-    lcMode,
-    wrapType,
-    netWet,
-    deliveryDate,
-  } = req.body;
+    query: { submit },
+    body: {
+      piCode,
+      piDate,
+      buyer,
+      buyerAddr,
+      tradeCode,
+      tradeName,
+      ownerCode,
+      ownerName,
+      contractCode,
+      trafMode,
+      iePort,
+      cusPort,
+      transMode,
+      currency,
+      tradeCountry,
+      tradeArea,
+      lcMode,
+      wrapType,
+      netWet,
+      deliveryDate,
+    },
+  } = req;
   if (submit) {
     if (
       piCode &&
@@ -129,8 +131,8 @@ const orderCreate = (req: Request, res: Response) => {
       cusPort &&
       transMode &&
       currency &&
-      trade_Country &&
-      tradeAreaCode &&
+      tradeCountry &&
+      tradeArea &&
       lcMode &&
       wrapType &&
       netWet &&
@@ -164,8 +166,8 @@ const orderChange = (req: Request, res: Response) => {
     cusPort,
     transMode,
     currency,
-    trade_Country,
-    tradeAreaCode,
+    tradeCountry,
+    tradeArea,
     lcMode,
     wrapType,
     netWet,
@@ -187,8 +189,8 @@ const orderChange = (req: Request, res: Response) => {
       cusPort &&
       transMode &&
       currency &&
-      trade_Country &&
-      tradeAreaCode &&
+      tradeCountry &&
+      tradeArea &&
       lcMode &&
       wrapType &&
       netWet &&
