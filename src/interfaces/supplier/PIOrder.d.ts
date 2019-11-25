@@ -116,7 +116,7 @@ export interface OrderDetailResType {
   volume?: number;
   netWet?: number;
   mark?: string;
-  containerList?: Partial<ContainerListType>;
+  containerList?: array<Partial<ContainerListType>>;
   deliveryDate?: string;
   piFile?: string;
   isCusSplit?: boolean;
