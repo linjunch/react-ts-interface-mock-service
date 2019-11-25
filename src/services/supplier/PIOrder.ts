@@ -19,9 +19,16 @@ import {
 
 // 订单列表接口
 export async function OrderList(params: OrderListParamsType) {
-  const { ...query } = params;
-  return request(`/api/supplier/sales/orders?${stringify(query)}`);
+  return request(`/api/supplier/sales/orders?${stringify(params)}`);
 }
+
+OrderList({piCode: 'string',
+  tradeName: 'string',
+  ownerName: 'string',
+  factoryName: 'string',
+  piDateL: 'string',
+  piDateU: 'string',
+})
 
 // 订单详情接口
 export async function OrderDetail(params: OrderDetailParamsType) {
