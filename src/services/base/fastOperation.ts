@@ -31,13 +31,13 @@ export async function register(params: RegisterParamsType) {
 }
 
 // 个人详情接口
-export async function MemberDetail(params: MemberDetailParamsType) {
+export async function memberDetail(params: MemberDetailParamsType) {
   const { companyType } = params;
   return request(`/api/${companyType}/member/detail`);
 }
 
 // 密码修改接口
-export async function ChangePassword(params: ChangePasswordParamsType) {
+export async function changePassword(params: ChangePasswordParamsType) {
   const { companyType, form } = params;
   return request(`/api/${companyType}/member`, {
     method: 'PUT',
@@ -46,13 +46,13 @@ export async function ChangePassword(params: ChangePasswordParamsType) {
 }
 
 // 退出登录接口
-export async function Logout(params: LogoutParamsType) {
+export async function logout(params: LogoutParamsType) {
   const { companyType } = params;
   return request(`/api/${companyType}/logout`);
 }
 
 // 微信绑定接口
-export async function WeChatBinding(params: WeChatBindingParamsType) {
+export async function weChatBinding(params: WeChatBindingParamsType) {
   const { companyType, form } = params;
   return request(`/api/${companyType}/member/wx`, {
     method: 'PUT',
@@ -61,7 +61,7 @@ export async function WeChatBinding(params: WeChatBindingParamsType) {
 }
 
 // 手机绑定接口
-export async function PhoneBinding(params: PhoneBindingParamsType) {
+export async function phoneBinding(params: PhoneBindingParamsType) {
   const { companyType, form } = params;
   return request(`/api/${companyType}/member/cellphone`, {
     method: 'PUT',
@@ -70,7 +70,7 @@ export async function PhoneBinding(params: PhoneBindingParamsType) {
 }
 
 // 邮箱绑定接口
-export async function EmailBinding(params: EmailBindingParamsType) {
+export async function emailBinding(params: EmailBindingParamsType) {
   const { companyType, form } = params;
   return request(`/api/${companyType}/member/email`, {
     method: 'PUT',
@@ -79,7 +79,7 @@ export async function EmailBinding(params: EmailBindingParamsType) {
 }
 
 // 偏好设置接口
-export async function MemberLike(params: MemberLikeParamsType) {
+export async function memberLike(params: MemberLikeParamsType) {
   const { companyType, form } = params;
   return request(`/api/${companyType}/member/like`, {
     method: 'PUT',

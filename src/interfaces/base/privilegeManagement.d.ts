@@ -34,7 +34,7 @@ export interface RoleDetailParamsType {
 export interface RoleDetailResType {
   id?: string;
   roleName?: string;
-  levels?: LevelListType;
+  levels?: Array<LevelListType>;
   insUser?: string;
   insDate?: string;
   sort?: number;
@@ -51,7 +51,7 @@ export interface RoleCreateParamsType {
 export interface RoleCreateFormType {
   roleName: string;
   sort: number;
-  levels: LevelListType;
+  levels: Array<LevelListType>;
 }
 
 export interface RoleCreateResType {
@@ -68,7 +68,7 @@ export interface RoleChangeParamsType {
 export interface RoleChangeFormType {
   roleName?: string;
   sort?: number;
-  levels: LevelListType;
+  levels: Array<LevelListType>;
 }
 
 export interface RoleChangeResType {
