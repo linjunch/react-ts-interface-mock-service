@@ -17,7 +17,7 @@ export interface LoginResType {
   root?: boolean;
   userName?: string;
   defaultView?: string;
-  roleId?: string;
+  roleId?: number;
 }
 
 // 注册接口

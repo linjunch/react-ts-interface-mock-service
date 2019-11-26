@@ -9,7 +9,7 @@ const shList = (req: Request, res: Response) => {
       elemTotal: '@integer(0, 100)',
       elems: [
         {
-          id: '@string',
+          id: '@int',
           shCode: '@string',
           amount: '@float(0, 100000000, 2, 2)',
           currency: '@string',
@@ -35,7 +35,7 @@ const shDetail = (req: Request, res: Response) => {
       mockjs.mock({
         code: 200,
         elem: {
-          id: '@string',
+          id: '@int',
           tradeName: '@string',
           shCode: '@string',
           amount: '@float(0, 10000000, 2, 2)',

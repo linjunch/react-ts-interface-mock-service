@@ -36,7 +36,7 @@ const voucherDetail = (req: Request, res: Response) => {
       mockjs.mock({
         code: 200,
         elem: {
-          id: '@string',
+          id: '@int',
           remitDate: '@date(yyyy-MM-dd)',
           remitAmt: '@@float(0, 10000000, 2, 2)',
           currency: '@string',
@@ -75,7 +75,7 @@ const voucherCreate = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: '@int',
       }),
     );
   }

@@ -11,7 +11,7 @@ const salemanList = (req: Request, res: Response) => {
         elemTotal: '@integer(0, 100)',
         elems: [
           {
-            managerId: '@string',
+            managerId: '@int',
             account: '@string',
             name: '@string',
             cellphone: '@string',

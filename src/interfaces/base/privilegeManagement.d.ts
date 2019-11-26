@@ -18,7 +18,7 @@ export interface RoleListParamsType {
 }
 
 export interface RoleListResType {
-  id?: string;
+  id?: number;
   roleName?: string;
   isRoot?: boolean;
   insDate?: string;
@@ -32,7 +32,7 @@ export interface RoleDetailParamsType {
 }
 
 export interface RoleDetailResType {
-  id?: string;
+  id?: number;
   roleName?: string;
   levels?: Array<LevelListType>;
   insUser?: string;
@@ -55,7 +55,7 @@ export interface RoleCreateFormType {
 }
 
 export interface RoleCreateResType {
-  token?: string;
+  token?: number;
 }
 
 // 角色修改接口
@@ -72,7 +72,7 @@ export interface RoleChangeFormType {
 }
 
 export interface RoleChangeResType {
-  token?: string;
+  token?: number;
 }
 
 // 角色状态接口
@@ -83,7 +83,7 @@ export interface RoleStateParamsType {
 }
 
 export interface RoleStateResType {
-  token: string;
+  token: number;
 }
 
 // public:管理员信息表单
@@ -121,7 +121,7 @@ export interface AdminListParamsType {
 }
 
 export interface AdminListResType {
-  id?: string;
+  id?: number;
   account?: string;
   name?: string;
   nameEn?: string;
@@ -170,7 +170,7 @@ export interface AdminCreateParamsType {
 }
 
 export interface AdminCreateResType {
-  token?: string;
+  token?: number;
 }
 
 // 管理员修改接口
@@ -187,7 +187,7 @@ export interface AdminChangeFormType {
 }
 
 export interface AdminChangeResType {
-  token?: string;
+  token?: number;
 }
 
 // 管理员状态接口
@@ -198,5 +198,5 @@ export interface AdminStateParamsType {
 }
 
 export interface AdminStateResType {
-  token: string;
+  token: number;
 }

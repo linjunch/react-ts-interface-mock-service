@@ -13,7 +13,7 @@ export interface SalemanListParamsType {
 }
 
 export interface SalemanListResType {
-  managerId?: string;
+  managerId?: number;
   account?: string;
   name?: string;
   cellphone?: string;
@@ -28,12 +28,12 @@ export interface SalemanCreateParamsType {
 }
 
 export interface SalemanCreateFormType {
-  managerId: string;
+  managerId: number;
   capacity: number;
 }
 
 export interface SalemanCreateResType {
-  token?: string;
+  token?: number;
 }
 
 // 库容修改接口
@@ -48,7 +48,7 @@ export interface SalemanCapacityFormType {
 }
 
 export interface SalemanCapacityResType {
-  token?: string;
+  token?: number;
 }
 
 // 业务员状态接口
@@ -59,5 +59,5 @@ export interface SalemansStateParamsType {
 }
 
 export interface SalemanStateResType {
-  token: string;
+  token: number;
 }

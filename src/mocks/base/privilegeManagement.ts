@@ -11,7 +11,7 @@ const roleList = (req: Request, res: Response) => {
         elemTotal: '@integer(0, 100)',
         elems: [
           {
-            id: '@string',
+            id: '@int',
             roleName: '@string',
             isRoot: false,
             insDate: '@datetime',
@@ -33,7 +33,7 @@ const roleDetail = (req: Request, res: Response) => {
       mockjs.mock({
         code: 200,
         elem: {
-          id: '@string',
+          id: '@int',
           roleName: '@string',
           levels: [
             {
@@ -60,7 +60,7 @@ const roleCreate = (req: Request, res: Response) => {
       res.send(
         mockjs.mock({
           code: 200,
-          token: '@string',
+          token: '@int',
         }),
       );
     }
@@ -102,7 +102,7 @@ const adminList = (req: Request, res: Response) => {
         elemTotal: '@integer(0, 100)',
         elems: [
           {
-            id: '@string',
+            id: '@int',
             account: '@string',
             name: '@string',
             nameEn: '@string',
@@ -163,7 +163,7 @@ const adminCreate = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: '@int',
       }),
     );
   }
@@ -200,7 +200,7 @@ export default {
   'GET /api/:companyType/admin/role/:roleToken/detail': roleDetail,
   'POST /api/:companyType/admin/role': roleCreate,
   'PUT /api/:companyType/admin/role/:roleToken': roleChange,
-  'PUT /api/:companyType/admin/role/:roleToken:/state': roleState,
+  'PUT /api/:companyType/admin/role/:roleToken/state': roleState,
   'GET /api/:companyType/admin/managers': adminList,
   'GET /api/:companyType/admin/manager/:managerToken/detail': adminDetail,
   'POST /api/:companyType/admin/manager': adminCreate,

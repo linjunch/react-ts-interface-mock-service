@@ -14,5 +14,5 @@ export type PackingType = 'packing';
 export type CheckStepType = Pick<StepType,'draft' | 'check' | 'pass' | 'return' | 'reject'>;
 export type ShStepType ='all'|'draft'|'shed'|'return'|'jhed'|'pass'|'affirm'|'reaffirm'|'verify';
 export type ContractsStepType ='draft'|'send'|'reject'|'censor'|'check'|'pass'|'refuse';
-export type ServiceType ='TraditionService' | 'NewService';
+export type ServiceType ='traditionService' | 'newService';
 export type DeclareType ='ESRDeclare' | 'OtherDeclare';

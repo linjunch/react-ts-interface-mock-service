@@ -84,7 +84,7 @@ const contractSign = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: '@int',
       }),
     );
   }
@@ -96,7 +96,7 @@ const contractRefuse = (req: Request, res: Response) => {
     res.send(
       mockjs.mock({
         code: 200,
-        token: '@string',
+        token: '@int',
       }),
     );
   }

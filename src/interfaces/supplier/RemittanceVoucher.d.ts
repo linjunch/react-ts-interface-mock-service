@@ -44,7 +44,7 @@ export interface VoucherListResType extends VoucherInfoType, VoucherStatusType {
 
 // 凭证详情接口
 export interface VoucherDetailParamsType {
-  voucherToken: string;
+  voucherToken: number;
 }
 
 export interface VoucherDetailResType extends VoucherInfoType, VoucherStatusType, VoucherOtherType {
@@ -65,5 +65,5 @@ export interface VoucherCreateFormType
 }
 
 export interface VoucherCreateResType extends VoucherInfoType, VoucherStatusType, VoucherOtherType {
-  token?: string;
+  token?: number;
 }

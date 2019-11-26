@@ -79,7 +79,7 @@ export interface OrderListResType {
 
 // 订单详情接口
 export interface OrderDetailParamsType {
-  orderToken: string;
+  orderToken: number;
 }
 
 export interface OrderDetailResType {
@@ -138,24 +138,24 @@ export interface OrderCreateParamsType {
 }
 
 export interface OrderCreateResType {
-  token?: string;
+  token?: number;
 }
 
 // 订单修改接口
 export interface OrderChangeParamsType {
-  orderToken: string;
+  orderToken: number;
   submit: boolean;
   order: Record<'containerList', Array<PickPartial<ContainerListType, 'weight'>>> &
   Omit<OrderFormType, 'containerList'>;
 }
 
 export interface OrderChangeResType {
-  token?: string;
+  token?: number;
 }
 
 // 唛头修改接口
 export interface ShippingMarksParamsType {
-  orderToken: string;
+  orderToken: number;
   container: ShippingMarksContainerType;
 }
 
@@ -164,22 +164,22 @@ export interface ShippingMarksContainerType {
 }
 
 export interface ShippingMarksResType {
-  token?: string;
+  token?: number;
 }
 
 // 资源下载接口
 export interface DownlaodParamsType {
-  orderToken: string;
+  orderToken: number;
   Type: PackingType;
 }
 
 // 商品列表接口
 export interface GoodsListParamsType {
-  orderToken: string;
+  orderToken: number;
 }
 
 export interface GoodsListResType {
-  id?: string;
+  id?: number;
   goodsId: number;
   goodsCode?: string;
   goodsName?: string;
@@ -193,7 +193,7 @@ export interface GoodsListResType {
 
 // 商品创建接口
 export interface GoodsCreateParamsType {
-  orderToken: string;
+  orderToken: number;
   goods: GoodsCreateElemType;
 }
 
@@ -205,13 +205,13 @@ export interface GoodsCreateElemType {
 }
 
 export interface GoodsCreateResType {
-  token?: string;
+  token?: number;
 }
 
 // 商品修改接口
 export interface GoodsChangeParamsType {
-  orderToken: string;
-  goodsToken: string;
+  orderToken: number;
+  goodsToken: number;
   goods: GoodsChangeElemType;
 }
 
@@ -222,18 +222,18 @@ export interface GoodsChangeElemType {
 }
 
 export interface GoodsChangeResType {
-  token?: string;
+  token?: number;
 }
 
 // 商品删除接口
 export interface GoodsDeleteParamsType {
-  orderToken: string;
-  goodsToken: string;
+  orderToken: number;
+  goodsToken: number;
 }
 
 // 装柜列表接口
 export interface ContainerListParamsType {
-  orderToken: string;
+  orderToken: number;
 }
 
 export interface ContainerListResType {
@@ -303,28 +303,28 @@ export interface GoodsListType {
 
 // 装柜创建接口
 export interface ContainerCreateParamsType {
-  orderToken: string;
+  orderToken: number;
   submit: boolean;
   container: ContainersType;
 }
 
 export interface ContainerCreateResType {
-  token?: string;
+  token?: number;
 }
 
 // 装柜修改接口
 export interface ContainerChangeParamsType {
-  orderToken: string;
-  containerToken: string;
+  orderToken: number;
+  containerToken: number;
   container: ContainersType;
 }
 
 export interface ContainerChangeResType {
-  token?: string;
+  token?: number;
 }
 
 // 装柜删除接口
 export interface ContainerDeleteParamsType {
-  orderToken: string;
-  containerToken: string;
+  orderToken: number;
+  containerToken: number;
 }

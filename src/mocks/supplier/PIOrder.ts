@@ -9,7 +9,7 @@ const orderList = (req: Request, res: Response) => {
       elemTotal: '@integer(0, 100)',
       elems: [
         {
-          managerId: '@string',
+          managerId: '@int',
           account: '@string',
           name: '@string',
           cellphone: '@string',
@@ -141,7 +141,7 @@ const orderCreate = (req: Request, res: Response) => {
       res.send(
         mockjs.mock({
           code: 200,
-          token: '@string',
+          token: '@int',
         }),
       );
     }
@@ -241,8 +241,8 @@ const goodsList = (req: Request, res: Response) => {
         elemTotal: 5,
         elems: [
           {
-            id: '@string',
-            goodsId: '@string',
+            id: '@int',
+            goodsId: '@int',
             goodsCode: '@string',
             goodsName: '@string',
             insDate: '@datetime',
@@ -306,7 +306,7 @@ const containerList = (req: Request, res: Response) => {
         elemTotal: 5,
         elems: [
           {
-            id: '@string',
+            id: '@int',
             cNo: '@integer(1, 100)',
             cCode: '@string',
             cType: '20GP',

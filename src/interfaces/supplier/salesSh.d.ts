@@ -31,7 +31,7 @@ export interface ShDetailResType {
 
 // 收汇详情接口
 export interface ShDetailParamsType {
-  shToken: string;
+  shToken: number;
 }
 
 export interface ShDetailResType {

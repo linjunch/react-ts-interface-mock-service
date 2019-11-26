@@ -20,7 +20,7 @@ export interface ContractListParamsType {
 }
 
 export interface ContractListResType {
-  id?: string;
+  id?: number;
   contractCode?: string;
   serviceType?: string;
   tradeName?: string;
@@ -36,7 +36,7 @@ export interface ContractListResType {
 
 // 协议详情接口
 export interface ContractDetailParamsType {
-  contractToken: string;
+  contractToken: number;
 }
 
 export interface ContractDetailResType {
@@ -78,7 +78,7 @@ export interface ContractDetailResType {
 
 // 协议签订接口
 export interface ContractSignParamsType {
-  contractToken: string;
+  contractToken: number;
   form: ContractSignFormType;
 }
 
@@ -87,14 +87,14 @@ export interface ContractSignFormType {
 }
 
 export interface ContractSignResType {
-  token: string;
+  token: number;
 }
 
 // 协议拒绝接口
 export interface ContractRefuseParamsType {
-  contractToken: string;
+  contractToken: number;
 }
 
 export interface ContractRefusResType {
-  token: string;
+  token: number;
 }
