@@ -3,7 +3,7 @@ import {
   SortType,
   StepType,
   SizeType,
-  AgentType,
+  DeclareType,
   CheckStepType,
 } from '../global';
 
@@ -59,8 +59,8 @@ export interface AdminOrderDetailResType {
   ownerName?: string;
   ownerAddr?: string;
   serviceType?: StepType;
-  agentType?: AgentType;
-  agentMark?: string;
+  declareType?: DeclareType;
+  declareMark?: string;
   contractCode?: string;
   remark?: string;
   trafMode?: string;

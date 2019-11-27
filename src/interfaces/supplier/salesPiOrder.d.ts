@@ -4,7 +4,7 @@ import {
   SortType,
   StepType,
   ServiceType,
-  AgentType,
+  DeclareType,
   SizeType,
   PackingType,
 } from '../global';
@@ -97,8 +97,8 @@ export interface OrderDetailResType {
   ownerName?: string;
   ownerAddr?: string;
   serviceType?: ServiceType;
-  agentType?: AgentType;
-  agentMark?: string;
+  declareType?: DeclareType;
+  declareMark?: string;
   contractCode?: string;
   remark?: string;
   trafMode?: string;
