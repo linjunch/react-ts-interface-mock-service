@@ -48,7 +48,7 @@ export interface OrderFormType {
 }
 
 // 订单列表接口
-interface OrderListParamsType {
+export interface OrderListParamsType {
   piCode?: string;
   tradeName?: string;
   ownerName?: string;

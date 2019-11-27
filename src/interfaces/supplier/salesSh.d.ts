@@ -36,20 +36,20 @@ export interface ShDetailParamsType {
 
 export interface ShDetailResType {
   id?: number;
-  tradeName?: number;
-  shCode?: number;
+  tradeName?: string;
+  shCode?: string;
   amount?: number;
-  currency?: number;
+  currency?: string;
   exchRate?: number;
   usdRate?: number;
-  remitter?: number;
+  remitter?: string;
   shDate?: string;
-  bankName?: number;
-  bankAccount?: number;
-  abstract?: number;
-  jhCode?: number;
+  bankName?: string;
+  bankAccount?: string;
+  abstract?: string;
+  jhCode?: string;
   jhDate?: string;
-  jhBankAccount?: number;
+  jhBankAccount?: string;
   shVoucherId?: number;
   insDate?: string;
   shStep?: number;

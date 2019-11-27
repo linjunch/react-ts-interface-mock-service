@@ -22,7 +22,7 @@ export interface ContractListParamsType {
 export interface ContractListResType {
   id?: number;
   contractCode?: string;
-  serviceType?: string;
+  serviceType?: Exclude<ServiceType, 'declareService'>;
   tradeName?: string;
   ownerName?: string;
   taxRate?: number;
@@ -45,7 +45,7 @@ export interface ContractDetailResType {
   deputyNo?: string;
   tradeName?: string;
   supplierCode?: string;
-  serviceType?: ServiceType;
+  serviceType?: Exclude<ServiceType, 'declareService'>;
   declareType?: DeclareType;
   declareMark?: string;
   ownerCode?: string;
