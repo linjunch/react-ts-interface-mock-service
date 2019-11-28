@@ -1,11 +1,4 @@
-import {
-  StatusType,
-  SortType,
-  StepType,
-  SizeType,
-  DeclareType,
-  CheckStepType,
-} from '../global';
+import { StatusType, SortType, StepType, SizeType, DeclareType, CheckStepType } from '../global';
 
 // 订单列表接口
 export interface AdminPiOrderListParamsType {
@@ -25,6 +18,7 @@ export interface AdminPiOrderListParamsType {
 }
 
 export interface AdminPiOrderListResType {
+  id?: number;
   orderCode?: string;
   piCode?: string;
   piDate?: string;

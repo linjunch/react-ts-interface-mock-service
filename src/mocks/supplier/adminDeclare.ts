@@ -9,6 +9,7 @@ const declaresList = (req: Request, res: Response) => {
       elemTotal: '@integer(0, 100)',
       elems: [
         {
+          id: '@int',
           orderCode: '@string',
           piCode: '@string',
           piDate: '@date(yyyy-MM-dd)',

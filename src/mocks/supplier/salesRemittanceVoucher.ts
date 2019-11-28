@@ -38,7 +38,7 @@ const voucherDetail = (req: Request, res: Response) => {
         elem: {
           id: '@int',
           remitDate: '@date(yyyy-MM-dd)',
-          remitAmt: '@@float(0, 10000000, 2, 2)',
+          remitAmt: 'float(0, 10000000, 2, 2)',
           currency: '@string',
           tradeName: '@string',
           buyerName: '@string',

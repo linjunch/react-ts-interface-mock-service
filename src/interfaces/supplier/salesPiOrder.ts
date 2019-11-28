@@ -64,6 +64,7 @@ export interface OrderListParamsType {
 }
 
 export interface OrderListResType {
+  id?: number;
   orderCode?: string;
   piCode?: string;
   piDate?: string;
@@ -144,7 +145,7 @@ export interface OrderChangeParamsType {
   orderToken: number;
   submit: boolean;
   order: Record<'containerList', Array<PickPartial<ContainerListType, 'weight'>>> &
-  Omit<OrderFormType, 'containerList'>;
+    Omit<OrderFormType, 'containerList'>;
 }
 
 export interface OrderChangeResType {
@@ -168,7 +169,7 @@ export interface ShippingMarksResType {
 // 资源下载接口
 export interface DownlaodParamsType {
   orderToken: number;
-  Type: Extract<DownloadType,'picking'>;
+  Type: Extract<DownloadType, 'picking'>;
 }
 
 // 商品列表接口

@@ -77,6 +77,6 @@ export interface AdminGoodsChangeResType {
 }
 // 导入模板下载接口，仅有入口参数
 export interface AdminGoodsDownloadParamsType {
-  Type: Extract<DownloadType,'template'>;
+  Type: Extract<DownloadType, 'template'>;
 }
 // 批量下载接口,没有入口参数和返回参数

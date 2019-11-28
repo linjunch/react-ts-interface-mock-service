@@ -9,6 +9,7 @@ const adminOrderList = (req: Request, res: Response) => {
       elemTotal: '@integer(0, 100)',
       elems: [
         {
+          id: '@int',
           orderCode: '@string',
           piCode: '@string',
           piDate: '@date(yyyy-MM-dd)',
@@ -158,7 +159,7 @@ const admincontainerList = (req: Request, res: Response) => {
                 no: '@integer(1, 100)',
                 name: '@string',
                 model: '@string',
-                dealQty: '@integer(1, 100000)',
+                dealQty: '@float',
                 dealUnit: '@string',
                 pkgsQty: '@float(0, 1000000, 2, 2)',
                 pkgsUnit: '@string',

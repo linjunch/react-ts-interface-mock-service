@@ -20,6 +20,7 @@ export interface DeclaresListParamsType {
   size?: number;
 }
 export interface DeclaresListResType {
+  id?:number;
   declareCode?: string;
   piCode?: string;
   piDate?: string;
