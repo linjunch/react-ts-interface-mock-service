@@ -64,11 +64,9 @@ export interface AdminPiOrderDetailResType {
   contractCode?: string;
   remark?: string;
   trafMode?: string;
-  trafModeOther?: string;
   iePort?: string;
   cusPort?: string;
   transMode?: string;
-  transModeOther?: string;
   currency?: string;
   tradeCountry?: string;
   tradeArea?: string;
