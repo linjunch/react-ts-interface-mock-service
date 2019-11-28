@@ -16,7 +16,7 @@ export interface ShListParamsType {
   size?: number;
 }
 
-export interface ShDetailResType {
+export interface ShListResType {
   id?: number;
   shCode?: string;
   amount?: number;

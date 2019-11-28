@@ -3,8 +3,7 @@ import {
   DeclareStepType,
   SortType,
   StatusType,
-  StepType,
-  DeclareStepType,
+  StepType
 } from '../global';
 
 // 关单列表接口
@@ -119,7 +118,7 @@ export interface LicenseListType {
 // 关单进度接口
 export interface DeclaresStepParamsType {
   declareToken: number;
-  declareStep: DeclareStepType;
+  declareStep: Extract<DeclareStepType, 'declare'|'withdraw'>;
 }
 export interface DeclaresStepResType {
   token: number;

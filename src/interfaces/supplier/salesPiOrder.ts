@@ -6,7 +6,7 @@ import {
   ServiceType,
   DeclareType,
   SizeType,
-  PackingType,
+  DownloadType,
 } from '../global';
 
 import { PickRequired, PickPartial } from '../utils';
@@ -170,7 +170,7 @@ export interface ShippingMarksResType {
 // 资源下载接口
 export interface DownlaodParamsType {
   orderToken: number;
-  Type: PackingType;
+  Type: Extract<DownloadType,'picking'>;
 }
 
 // 商品列表接口

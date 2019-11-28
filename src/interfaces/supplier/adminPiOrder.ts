@@ -8,14 +8,14 @@ import {
 } from '../global';
 
 // 订单列表接口
-export interface AdminOrderListParamsType {
-  piCode?: sring;
-  piCodtradeNamee?: sring;
-  ownerName?: sring;
-  factoryName?: sring;
-  insUser?: sring;
-  piDateL?: sring;
-  piDateU?: sring;
+export interface AdminPiOrderListParamsType {
+  piCode?: string;
+  piCodtradeNamee?: string;
+  ownerName?: string;
+  factoryName?: string;
+  insUser?: string;
+  piDateL?: string;
+  piDateU?: string;
   status?: Exclude<StatusType, 'deleted'>;
   step?: StepType;
   direction?: boolean;
@@ -24,7 +24,7 @@ export interface AdminOrderListParamsType {
   size?: number;
 }
 
-export interface AdminOrderListResType {
+export interface AdminPiOrderListResType {
   orderCode?: string;
   piCode?: string;
   piDate?: string;
@@ -40,11 +40,11 @@ export interface AdminOrderListResType {
 }
 
 // 订单详情接口
-export interface AdminOrderDetailParamsType {
+export interface AdminPiOrderDetailParamsType {
   orderToken: number;
 }
 
-export interface AdminOrderDetailResType {
+export interface AdminPiOrderDetailResType {
   orderCode?: string;
   supplierCode?: string;
   contact?: string;
@@ -78,7 +78,7 @@ export interface AdminOrderDetailResType {
   volume?: number;
   netWet?: number;
   mark?: string;
-  containerList?: Array<ContainerListType>;
+  containerList?: Array<PiContainerListType>;
   deliveryDate?: string;
   piFile?: string;
   isCusSplit?: boolean;
@@ -92,7 +92,7 @@ export interface AdminOrderDetailResType {
   step?: Exclude<StepType, 'all'>;
 }
 
-export interface ContainerListType {
+export interface PiContainerListType {
   no?: number;
   size?: SizeType;
   count?: number;
@@ -100,20 +100,20 @@ export interface ContainerListType {
 }
 
 // 订单发送接口
-export interface AdminOrderSendParamsType {
+export interface AdminPiOrderSendParamsType {
   orderToken: number;
 }
 
-export interface AdminOrderSendResType {
+export interface AdminPiOrderSendResType {
   token: number;
 }
 
 // 商品列表接口
-export interface AdminGoodsListParamsType {
+export interface AdminPiGoodsListParamsType {
   orderToken: number;
 }
 
-export interface AdminGoodsListResType {
+export interface AdminPiGoodsListResType {
   id?: number;
   goodsId: number;
   goodsCode?: string;
@@ -127,11 +127,11 @@ export interface AdminGoodsListResType {
 }
 
 // 装柜列表接口
-export interface AdminContainerListParamsType {
+export interface AdminPiContainerListParamsType {
   orderToken: number;
 }
 
-export interface AdminContainerListResType {
+export interface AdminPiContainerListResType {
   id?: number;
   cNo?: number;
   cCode?: string;
@@ -144,7 +144,7 @@ export interface AdminContainerListResType {
   grossWet?: number;
   netWet?: number;
   volume?: number;
-  goodsList?: Array<GoodsListType>;
+  goodsList?: Array<PiGoodsListType>;
   img1Url?: string;
   img2Url?: string;
   img3Url?: string;
@@ -153,7 +153,7 @@ export interface AdminContainerListResType {
   videoList?: Array<string>;
 }
 
-export interface GoodsListType {
+export interface PiGoodsListType {
   no?: number;
   name?: string;
   model?: string;

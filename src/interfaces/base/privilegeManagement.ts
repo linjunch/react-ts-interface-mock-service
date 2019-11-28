@@ -45,7 +45,7 @@ export interface RoleDetailResType {
 // 角色创建接口
 export interface RoleCreateParamsType {
   companyType: CompanyType;
-  role: RolesCreateFormType;
+  role: RoleCreateFormType;
 }
 
 export interface RoleCreateFormType {
