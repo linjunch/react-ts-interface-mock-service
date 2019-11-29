@@ -1,5 +1,4 @@
 import {
-  CompanyType,
   StatusType,
   SortType,
   StepType,

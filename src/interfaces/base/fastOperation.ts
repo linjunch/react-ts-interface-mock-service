@@ -1,4 +1,4 @@
-import { CompanyType, RecordType, SourceType, DefaultViewType } from '../global';
+import { CompanyType, SourceType, DefaultViewType } from '../global';
 
 // 登录接口
 export interface LoginParamsType {

@@ -12,7 +12,7 @@ export interface ContractListParamsType {
   contractCode?: string;
   effectiveDateL?: string;
   effectiveDateU?: string;
-  step?: CheckStepType | 'all';
+  step?: CheckStepType;
   direction?: boolean;
   sort?: SortType;
   page?: number;

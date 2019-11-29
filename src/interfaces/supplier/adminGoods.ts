@@ -7,7 +7,7 @@ export interface AdminGoodsListParamsType {
   insDateL?: string;
   insDateU?: string;
   status?: Exclude<StatusType, 'deleted'>;
-  step?: CheckStepType | 'all';
+  step?: CheckStepType;
   direction?: boolean;
   sort?: GoodsSortType;
   page?: number;
@@ -21,7 +21,7 @@ export interface AdminGoodsListResType {
   model?: string;
   imgUrl?: string;
   status?: Exclude<StatusType, 'all'>;
-  step?: CheckStepType;
+  step?: Exclude<CheckStepType, 'all'>;
 }
 // 商品详情接口
 export interface AdminGoodsDetailParamsType {
@@ -43,7 +43,7 @@ export interface AdminGoodsDetailResType {
   insUser?: string;
   insDate?: string;
   status?: Exclude<StatusType, 'all'>;
-  step?: CheckStepType;
+  step?: Exclude<CheckStepType, 'all'>;
 }
 // pubilc:商品表单接口
 export interface AdminGoodsFormParamsType {
