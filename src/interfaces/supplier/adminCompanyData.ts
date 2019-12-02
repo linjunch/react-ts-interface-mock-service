@@ -59,7 +59,7 @@ export interface CompanyChangeFormType extends Required<PublicElemsType> {
   companyMode: string;
 }
 export interface CompanyChangeResType {
-  token?: string;
+  token?: number;
 }
 
 // 自营发货人列表接口
