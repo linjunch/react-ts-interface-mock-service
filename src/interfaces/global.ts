@@ -23,3 +23,4 @@ export type CustomerType = 'customer' | 'supplier';
 export type PotentialCustomersType = 'center' | 'public' | 'private';
 export type CustomerSortType = 'insDate' ;
 export type InputType = 'apply' | 'supply' | 'intserv' ;
+export type ValType = 'pass' | 'return' | 'reject' ;
