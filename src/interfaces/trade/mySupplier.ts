@@ -6,7 +6,7 @@ import {
   DeclareType,
   CompanyModeType,
   SortType,
-  ContractsStepType,
+  ContractStepType,
 } from '../global';
 
 // 生产销售Res通用
@@ -170,7 +170,7 @@ export interface ContractListResType {
   expiryDate?: string;
   isLock?: boolean;
   status?: Exclude<StatusType, 'all'>;
-  step?: ContractsStepType;
+  step?: ContractStepType;
 }
 
 // 协议详情接口
@@ -199,7 +199,7 @@ export interface ContractDetailResType extends Exclude<ContractPublicType, 'bank
   insDate?: string;
   isLock?: boolean;
   status?: Exclude<StatusType, 'all'>;
-  contractStep?: ContractsStepType;
+  contractStep?: ContractStepType;
 }
 
 // 协议查验接口

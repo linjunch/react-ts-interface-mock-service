@@ -1,6 +1,6 @@
 import {
   CheckStepType,
-  ContractsStepType,
+  ContractStepType,
   SortType,
   StatusType,
   ServiceType,
@@ -31,7 +31,7 @@ export interface ContractListResType {
   expiryDate?: string;
   isLock?: boolean;
   status?: Exclude<StatusType, 'all'>;
-  step?: ContractsStepType;
+  step?: ContractStepType;
 }
 
 // 协议详情接口
@@ -73,7 +73,7 @@ export interface ContractDetailResType {
   insDate?: string;
   isLock?: number;
   status?: Exclude<StatusType, 'all'>;
-  contractStep?: ContractsStepType;
+  contractStep?: ContractStepType;
 }
 
 // 协议签订接口
