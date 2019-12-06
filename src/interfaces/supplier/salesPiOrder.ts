@@ -8,7 +8,7 @@ import {
   DownloadType,
 } from '../global';
 
-import { PickRequired, PickPartial } from '../utils';
+import { PickPartial } from '../utils';
 // public：订单信息接口
 export interface ContainerListType {
   no: number;

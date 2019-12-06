@@ -6,3 +6,6 @@ export * from './voucher';
 export * from './tradeSh';
 export * from './statisticalAnalysis';
 export * from './customerManagement';
+export * from './adminOrderQuery';
+export * from './companydata';
+export * from './adminStatisticalAnalysis';
