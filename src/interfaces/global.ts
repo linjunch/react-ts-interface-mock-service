@@ -27,3 +27,5 @@ export type ValType = 'pass' | 'return' | 'reject' ;
 export type ShAttrType = 'serviceType' | 'buyer' | 'owner'| 'country'| 'currency' ;
 export type LedgerAttrType = 'tradeArea' | 'tradeCountry' | 'buyer'| 'hscode'| 'factory'| 'owner'| 'trade' ;
 export type OrderAttrType = 'tradeArea' | 'tradeCountry' | 'buyer'| 'hscode'| 'factory'| 'owner'| 'trade'|'supplier'|'salesman' ;
+export type CustomerRelationType = 'being' | 'history'  ;
+export type LockStatusType = 'lock' | 'unlock'  ;
