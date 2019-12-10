@@ -4,6 +4,7 @@ import { StatusType, CheckStepType, GoodsSortType, DownloadType } from '../globa
 export interface AdminGoodsListParamsType {
   goodsName?: string;
   goodsCode?: string;
+  factoryName?: string;
   insDateL?: string;
   insDateU?: string;
   status?: Exclude<StatusType, 'deleted'>;
@@ -17,6 +18,7 @@ export interface AdminGoodsListResType {
   id?: number;
   goodsCode?: string;
   goodsName?: string;
+  factoryName?: string;
   insDate?: string;
   model?: string;
   imgUrl?: string;

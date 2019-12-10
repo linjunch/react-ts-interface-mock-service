@@ -110,6 +110,7 @@ export interface AdminPiGoodsListResType {
   goodsId: number;
   goodsCode?: string;
   goodsName?: string;
+  factoryName?: string;
   model?: string;
   imgUrl?: string;
   dealQty: number;

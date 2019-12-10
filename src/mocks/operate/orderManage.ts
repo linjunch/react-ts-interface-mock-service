@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
-const customerOrderList = (req: Request, res: Response) => {
+const orderList = (req: Request, res: Response) => {
   const {
     query: { page, size },
   } = req;
@@ -17,7 +17,6 @@ const customerOrderList = (req: Request, res: Response) => {
           piDate: '@date(yyyy-MM-dd)',
           buyer: '@string',
           tradeName: '@string',
-          factoryName: '@string',
           ownerName: '@string',
           insUser: '@string',
           insDate: '@datetime',
@@ -33,7 +32,7 @@ const customerOrderList = (req: Request, res: Response) => {
   );
 };
 
-const customerOrderDetail = (req: Request, res: Response) => {
+const orderDetail = (req: Request, res: Response) => {
   const {
     params: { orderToken },
   } = req;
@@ -97,11 +96,25 @@ const customerOrderDetail = (req: Request, res: Response) => {
     );
 };
 
-const customerGoodsList = (req: Request, res: Response) => {
+const orderStep = (req: Request, res: Response) => {
+  const {
+    params: { orderToken, orderStep },
+  } = req;
+  if (orderToken && orderStep) {
+    res.send(
+      mockjs.mock({
+        code: 200,
+        token: orderToken,
+      }),
+    );
+  }
+};
+
+const goodsList = (req: Request, res: Response) => {
   const {
     params: { orderToken },
   } = req;
-  orderToken &&
+  if (orderToken) {
     res.send(
       mockjs.mock({
         code: 200,
@@ -124,13 +137,14 @@ const customerGoodsList = (req: Request, res: Response) => {
         ],
       }),
     );
+  }
 };
 
-const customerContainerList = (req: Request, res: Response) => {
+const containerList = (req: Request, res: Response) => {
   const {
     params: { orderToken },
   } = req;
-  orderToken &&
+  if (orderToken) {
     res.send(
       mockjs.mock({
         code: 200,
@@ -174,11 +188,13 @@ const customerContainerList = (req: Request, res: Response) => {
         ],
       }),
     );
+  }
 };
 
 export default {
-  'GET /api/trade/sales/orders': customerOrderList,
-  'GET /api/trade/sales/order/:orderToken/detail': customerOrderDetail,
-  'GET /api/trade/sales/order/:orderToken/goodses': customerGoodsList,
-  'GET /api/trade/sales/order/:orderToken/containers': customerContainerList,
+  'GET /api/operator/service/orders': orderList,
+  'GET /api/operator/service/order/:orderToken/detail': orderDetail,
+  'PUT /api/operator/service/order/:orderToken/step/:orderStep': orderStep,
+  'GET /api/operator/service/order/:orderToken/goodses': goodsList,
+  'GET /api/operator/service/order/:orderToken/containers': containerList,
 };

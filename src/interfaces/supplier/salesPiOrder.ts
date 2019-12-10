@@ -69,7 +69,6 @@ export interface OrderListResType {
   piDate?: string;
   buyer?: string;
   tradeName?: string;
-  factoryName?: string;
   ownerName?: string;
   insDate?: string;
   isLock?: boolean;
@@ -181,6 +180,7 @@ export interface GoodsListResType {
   goodsId: number;
   goodsCode?: string;
   goodsName?: string;
+  factoryName?: string;
   model?: string;
   imgUrl?: string;
   dealQty: number;

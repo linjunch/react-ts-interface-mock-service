@@ -249,6 +249,7 @@ const goodsList = (req: Request, res: Response) => {
             goodsId: '@int',
             goodsCode: '@string',
             goodsName: '@string',
+            factoryName: '@string',
             insDate: '@datetime',
             model: '@string',
             imgUrl: '@url',

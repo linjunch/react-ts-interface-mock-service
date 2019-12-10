@@ -1,9 +1,22 @@
-import { StatusType, StepType, SortType, SizeType, ServiceType, DeclareType } from '../global';
+import {
+  StatusType,
+  StepType,
+  SortType,
+  ServiceType,
+  DeclareType,
+  SizeType,
+  CheckStepType,
+  OrderStepType,
+} from '../global';
 
 // 订单列表接口
-export interface CustomerOrderListParamsType {
+export interface OrderListParamsType {
   piCode?: string;
+  supplierName?: string;
+  tradeName?: string;
   ownerName?: string;
+  factoryName?: string;
+  insUser?: string;
   piDateL?: string;
   piDateU?: string;
   status?: Exclude<StatusType, 'deleted'>;
@@ -13,25 +26,26 @@ export interface CustomerOrderListParamsType {
   page?: number;
   size?: number;
 }
-export interface CustomerOrderListResType {
-  id?: number;
-  orderCode?: string;
-  piCode?: string;
-  piDate?: string;
-  buyer?: string;
-  ownerName?: string;
-  insUser?: string;
-  insDate?: string;
-  isLock?: boolean;
+export interface OrderListResType {
+  id: number;
+  orderCode: string;
+  piCode: string;
+  piDate: string;
+  buyer: string;
+  tradeName: string;
+  factoryName: string;
+  ownerName: string;
+  insUser: string;
+  insDate: string;
+  isLock: boolean;
   status?: Exclude<StatusType, 'all'>;
   step?: Exclude<StepType, 'all'>;
 }
-
 // 订单详情接口
-export interface CustomerOrderDetailParamsType {
+export interface OrderDetailParamsType {
   orderToken: number;
 }
-export interface CustomerOrderDetailResType {
+export interface OrderDetailResType {
   orderCode?: string;
   supplierCode?: string;
   contact?: string;
@@ -63,7 +77,7 @@ export interface CustomerOrderDetailResType {
   volume?: number;
   netWet?: number;
   mark?: string;
-  containerList?: Array<CustomerOrderDetailListType>;
+  containerList?: OrderDetailListType;
   deliveryDate?: string;
   piFile?: string;
   isCusSplit?: boolean;
@@ -73,21 +87,28 @@ export interface CustomerOrderDetailResType {
   insUser?: string;
   createDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: Exclude<CheckStepType, 'all'>;
   step?: Exclude<StepType, 'all'>;
 }
-export interface CustomerOrderDetailListType {
+export interface OrderDetailListType {
   no?: number;
   size?: SizeType;
   count?: number;
   weight?: number;
 }
-
+// 订单进度接口
+export interface OrderStepParamsType {
+  orderToken: number;
+  orderStep: OrderStepType;
+}
+export interface OrderStepResType {
+  token: number;
+}
 // 商品列表接口
-export interface CustomerGoodsListParamsType {
+export interface OrederGoodsListParamsType {
   orderToken: number;
 }
-export interface CustomerGoodsListResType {
+export interface OrderGoodsListResType {
   id?: number;
   goodsId: number;
   goodsCode?: string;
@@ -101,10 +122,10 @@ export interface CustomerGoodsListResType {
   dealAmount: number;
 }
 // 装柜列表接口
-export interface CustomerContainerListParamsType {
+export interface ContainerListParamsType {
   orderToken: number;
 }
-export interface CustomerContainerListResType {
+export interface ContainerListResType {
   id?: number;
   cNo?: number;
   cCode?: string;
@@ -117,7 +138,7 @@ export interface CustomerContainerListResType {
   grossWet?: number;
   netWet?: number;
   volume?: number;
-  goodsList?: Array<GoodsListType>;
+  goodsList?: Array<ContainerListType>;
   img1Url?: string;
   img2Url?: string;
   img3Url?: string;
@@ -125,7 +146,7 @@ export interface CustomerContainerListResType {
   img5Url?: string;
   videoList?: Array<string>;
 }
-interface GoodsListType {
+export interface ContainerListType {
   no?: number;
   name?: string;
   model?: string;
@@ -135,6 +156,6 @@ interface GoodsListType {
   pkgsUnit?: string;
   trayQty?: number;
   grossWet?: number;
-  NetWet?: number;
+  netWet?: number;
   volume?: number;
 }

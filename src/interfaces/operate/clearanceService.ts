@@ -1,7 +1,7 @@
 import { IsLockType, DeclareStepType, SortType, StatusType, StepType } from '../global';
 
 // 关单列表接口
-export interface DeclaresListParamsType {
+export interface DeclareListParamsType {
   piCode?: string;
   tradeName?: string;
   ownerName?: string;
@@ -13,7 +13,7 @@ export interface DeclaresListParamsType {
   page?: number;
   size?: number;
 }
-export interface DeclaresListResType {
+export interface DeclareListResType {
   id?: number;
   declareCode?: string;
   piCode?: string;
@@ -27,12 +27,11 @@ export interface DeclaresListResType {
   status?: Exclude<StatusType, 'all'>;
   step?: Exclude<StepType, 'all'>;
 }
-
 // 关单详情接口
-export interface DeclaresDetailParamsType {
+export interface DeclareDetailParamsType {
   declareToken: number;
 }
-export interface DeclaresDetailResType {
+export interface DeclareDetailResType {
   declareCode?: string;
   supplierCode?: string;
   ownerCode?: string;
@@ -72,12 +71,15 @@ export interface DeclaresDetailResType {
   feeCurr?: string;
   feeMark?: number;
   feeRate?: number;
+
   insurCurr?: string;
   insurMark?: number;
   insurRate?: number;
+
   otherCurr?: string;
   otherMark?: number;
   otherRate?: number;
+
   packNo?: number;
   wrapType?: string;
   grossWet?: number;
@@ -88,14 +90,16 @@ export interface DeclaresDetailResType {
   attaDocu?: string;
   mark?: string;
   notes?: string;
-  containerList?: Array<ContainerListtype>;
-  licenseList?: Array<LicenseListType>;
-  insDate?: string;
+
+  containerList?: Array<DeclareContainerListType>;
+  licenseList?: Array<DeclareLicenseListType>;
+
+  insDate?: String;
   isLock?: boolean;
   status?: Exclude<StatusType, 'all'>;
   declareStep?: Exclude<DeclareStepType, 'all'>;
 }
-export interface ContainerListtype {
+export interface DeclareContainerListType {
   no?: number;
   num?: string;
   size?: string;
@@ -103,27 +107,17 @@ export interface ContainerListtype {
   goodsno?: string;
   weight?: number;
 }
-export interface LicenseListType {
+export interface DeclareLicenseListType {
   no?: number;
   decatttype?: string;
   title?: string;
   url?: string;
 }
-
-// 关单进度接口
-export interface DeclaresStepParamsType {
-  declareToken: number;
-  declareStep: Extract<DeclareStepType, 'declare' | 'withdraw'>;
-}
-export interface DeclaresStepResType {
-  token: number;
-}
-
 // 商品列表接口
-export interface DeclaresGoodsListParamsType {
+export interface DeclareGoodsListParamsType {
   declareToken: number;
 }
-export interface DeclaresGoodsListResType {
+export interface DeclareGoodsListResType {
   gNo?: number;
   hscode?: string;
   factoryName?: string;
@@ -141,6 +135,38 @@ export interface DeclaresGoodsListResType {
   exgNo?: string;
   destinationCountry?: string;
   originCountry?: string;
-  dutyMode?: string;
+  hsdutyModecode?: string;
   districtCode?: string;
+}
+// 关单进度接口
+export interface DeclareStepParamsType {
+  declareToken: number;
+  declareStep: Extract<StepType, 'send' | 'pass'>;
+}
+export interface DeclareStepResType {
+  token: number;
+}
+// 关单已申报接口
+export interface DeclaringParamsType {
+  declareToken: number;
+  form: DeclaringFormType;
+}
+export interface DeclaringFormType {
+  entryId: string;
+  seqNo: string;
+  declareDate: string;
+}
+export interface DeclaringResType {
+  token: number;
+}
+// 关单已结关接口
+export interface ClearanceParamsType {
+  declareToken: number;
+  form: ClearanceFormType;
+}
+export interface ClearanceFormType {
+  exDate: string;
+}
+export interface ClearanceResType {
+  token: number;
 }

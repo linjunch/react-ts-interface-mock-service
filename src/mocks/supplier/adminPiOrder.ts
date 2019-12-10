@@ -119,6 +119,7 @@ const adminGoodsList = (req: Request, res: Response) => {
             goodsId: '@string',
             goodsCode: '@string',
             goodsName: '@string',
+            factoryName: '@string',
             insDate: '@datetime',
             model: '@string',
             imgUrl: '@url',

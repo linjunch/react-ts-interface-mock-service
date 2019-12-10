@@ -4,6 +4,7 @@ import { StatusType, StepType, CheckStepType, CompanySortType } from '../global'
 export interface GoodsListParamsType {
   ownerName?: string;
   supplierName?: string;
+  factoryName?: string;
   goodsName?: string;
   goodsCode?: string;
   insDateL?: string;
@@ -19,6 +20,7 @@ export interface GoodsListResType {
   id?: number;
   goodsCode?: string;
   goodsName?: string;
+  factoryName?: string;
   insDate?: string;
   model?: string;
   imgUrl?: string;

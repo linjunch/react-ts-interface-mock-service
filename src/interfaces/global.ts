@@ -29,3 +29,5 @@ export type LedgerAttrType = 'tradeArea' | 'tradeCountry' | 'buyer'| 'hscode'| '
 export type OrderAttrType = 'tradeArea' | 'tradeCountry' | 'buyer'| 'hscode'| 'factory'| 'owner'| 'trade'|'supplier'|'salesman' ;
 export type CustomerRelationType = 'being' | 'history'  ;
 export type LockStatusType = 'lock' | 'unlock'  ;
+export type OrderStepType = 'container' | 'reject' | 'check' | 'return' |'refuse' | 'pass' | 'finish' | 'convert' ;
+export type OrderFeeAttrtype = 'feeType' | 'trade' | 'owner' | 'supplier' ;

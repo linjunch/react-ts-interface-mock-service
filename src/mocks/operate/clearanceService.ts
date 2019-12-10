@@ -1,15 +1,17 @@
 import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
-const declaresList = (req: Request, res: Response) => {
-  const { size, page } = req.query;
+const declareList = (req: Request, res: Response) => {
+  const {
+    query: { page, size },
+  } = req;
   res.send(
     mockjs.mock({
       code: 200,
       elemTotal: '@integer(0, 100)',
       elems: [
         {
-          id: '@int',
+          id: '@integer',
           orderCode: '@string',
           piCode: '@string',
           piDate: '@date(yyyy-MM-dd)',
@@ -30,9 +32,11 @@ const declaresList = (req: Request, res: Response) => {
   );
 };
 
-const declaresDetail = (req: Request, res: Response) => {
-  const { declareToken } = req.params;
-  if (declareToken) {
+const declareDetail = (req: Request, res: Response) => {
+  const {
+    params: { declareToken },
+  } = req;
+  declareToken &&
     res.send(
       mockjs.mock({
         code: 200,
@@ -117,24 +121,13 @@ const declaresDetail = (req: Request, res: Response) => {
         },
       }),
     );
-  }
 };
 
-const declaresStep = (req: Request, res: Response) => {
-  const { declareToken, declareStep } = req.params;
-  if (declareToken && declareStep) {
-    res.send(
-      mockjs.mock({
-        code: 200,
-        token: declareToken,
-      }),
-    );
-  }
-};
-
-const declaresGoodsList = (req: Request, res: Response) => {
-  const { declareToken } = req.params;
-  if (declareToken) {
+const goodsList = (req: Request, res: Response) => {
+  const {
+    params: { declareToken },
+  } = req;
+  declareToken &&
     res.send(
       mockjs.mock({
         code: 200,
@@ -165,12 +158,57 @@ const declaresGoodsList = (req: Request, res: Response) => {
         ],
       }),
     );
+};
+
+const declareStep = (req: Request, res: Response) => {
+  const {
+    params: { declareToken, declareStep },
+  } = req;
+  if (declareToken && declareStep) {
+    res.send(
+      mockjs.mock({
+        code: 200,
+        token: declareToken,
+      }),
+    );
+  }
+};
+
+const declaring = (req: Request, res: Response) => {
+  const {
+    params: { declareToken },
+    body: { entryId, seqNo, declareDate },
+  } = req;
+  if (declareToken && entryId && seqNo && declareDate) {
+    res.send(
+      mockjs.mock({
+        code: 200,
+        token: declareToken,
+      }),
+    );
+  }
+};
+
+const clearance = (req: Request, res: Response) => {
+  const {
+    params: { declareToken },
+    body: { exDate },
+  } = req;
+  if (declareToken && exDate) {
+    res.send(
+      mockjs.mock({
+        code: 200,
+        token: declareToken,
+      }),
+    );
   }
 };
 
 export default {
-  'GET /api/supplier/admin/declares': declaresList,
-  'GET /supplier/admin/declare/:declareToken/detail': declaresDetail,
-  'PUT /supplier/admin/declare/:declareToken/step/:declareStep': declaresStep,
-  'GET /supplier/admin/declare/:declareToken/goodses': declaresGoodsList,
+  'GET /api/operator/service/declares': declareList,
+  'GET /api/operator/service/declare/:declareToken/detail': declareDetail,
+  'GET /api/operator/service/declare/:declareToken/goodses': goodsList,
+  'PUT /api/operator/service/declare/:declareToken/step/:declareStep': declareStep,
+  'PUT /api/supplier/admin/declare/:declareToken/step/declaring': declaring,
+  'PUT /api/supplier/admin/declare/:declareToken/step/clearance': clearance,
 };
