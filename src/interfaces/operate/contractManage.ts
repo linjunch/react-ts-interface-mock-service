@@ -38,7 +38,7 @@ export interface ContractListResType {
 
 // 协议详情接口
 export interface ContractDetailParamsType {
-  contractToken: boolean;
+  contractToken: number;
 }
 export interface ContractDetailResType {
   contractCode?: string;
