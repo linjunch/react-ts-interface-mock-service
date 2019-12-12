@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
-const AdminDeclareList = (req: Request, res: Response) => {
+const adminDeclareList = (req: Request, res: Response) => {
   const {
     query: { page, size },
   } = req;
@@ -32,7 +32,7 @@ const AdminDeclareList = (req: Request, res: Response) => {
   );
 };
 
-const AdminDeclareDetail = (req: Request, res: Response) => {
+const adminDeclareDetail = (req: Request, res: Response) => {
   const {
     params: { declareToken },
   } = req;
@@ -123,7 +123,7 @@ const AdminDeclareDetail = (req: Request, res: Response) => {
     );
 };
 
-const AdminGoodsList = (req: Request, res: Response) => {
+const adminGoodsList = (req: Request, res: Response) => {
   const {
     params: { declareToken },
   } = req;
@@ -160,7 +160,7 @@ const AdminGoodsList = (req: Request, res: Response) => {
     );
 };
 
-const AdminDeclareStep = (req: Request, res: Response) => {
+const adminDeclareStep = (req: Request, res: Response) => {
   const {
     params: { declareToken, declareStep },
   } = req;
@@ -175,8 +175,8 @@ const AdminDeclareStep = (req: Request, res: Response) => {
 };
 
 export default {
-  'GET /api/operator/admin/declares': AdminDeclareList,
-  'GET /api/operator/admin/declare/:declareToken/detail': AdminDeclareDetail,
-  'GET /api/operator/admin/declare/:declareToken/goodses': AdminGoodsList,
-  'PUT /api/operator/admin/declare/:declareToken/step/:declareStep': AdminDeclareStep,
+  'GET /api/operator/admin/declares': adminDeclareList,
+  'GET /api/operator/admin/declare/:declareToken/detail': adminDeclareDetail,
+  'GET /api/operator/admin/declare/:declareToken/goodses': adminGoodsList,
+  'PUT /api/operator/admin/declare/:declareToken/step/:declareStep': adminDeclareStep,
 };

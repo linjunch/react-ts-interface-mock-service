@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
-const AdminOrderList = (req: Request, res: Response) => {
+const adminOrderList = (req: Request, res: Response) => {
   const {
     query: { page, size },
   } = req;
@@ -32,7 +32,7 @@ const AdminOrderList = (req: Request, res: Response) => {
   );
 };
 
-const AdminOrderDetail = (req: Request, res: Response) => {
+const adminOrderDetail = (req: Request, res: Response) => {
   const {
     params: { orderToken },
   } = req;
@@ -96,7 +96,7 @@ const AdminOrderDetail = (req: Request, res: Response) => {
     );
 };
 
-const AdminGoodsList = (req: Request, res: Response) => {
+const adminGoodsList = (req: Request, res: Response) => {
   const {
     params: { orderToken },
   } = req;
@@ -126,7 +126,7 @@ const AdminGoodsList = (req: Request, res: Response) => {
   }
 };
 
-const AdminContainerList = (req: Request, res: Response) => {
+const adminContainerList = (req: Request, res: Response) => {
   const {
     params: { orderToken },
   } = req;
@@ -177,7 +177,7 @@ const AdminContainerList = (req: Request, res: Response) => {
   }
 };
 
-const AdminOrderLock = (req: Request, res: Response) => {
+const adminOrderLock = (req: Request, res: Response) => {
   const {
     params: { orderToken, lockStatus },
   } = req;
@@ -192,9 +192,9 @@ const AdminOrderLock = (req: Request, res: Response) => {
 };
 
 export default {
-  'GET /api/operator/admin/orders': AdminOrderList,
-  'GET /api/operator/admin/order/:orderToken/detail': AdminOrderDetail,
-  'GET /api/operator/admin/order/:orderToken/goodses': AdminGoodsList,
-  'GET /api/operator/admin/order/:orderToken/containers': AdminContainerList,
-  'PUT /api/operator/admin/order/:orderToken/:lockStatus': AdminOrderLock,
+  'GET /api/operator/admin/orders': adminOrderList,
+  'GET /api/operator/admin/order/:orderToken/detail': adminOrderDetail,
+  'GET /api/operator/admin/order/:orderToken/goodses': adminGoodsList,
+  'GET /api/operator/admin/order/:orderToken/containers': adminContainerList,
+  'PUT /api/operator/admin/order/:orderToken/:lockStatus': adminOrderLock,
 };

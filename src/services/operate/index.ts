@@ -9,3 +9,6 @@ export * from './statisticalAnalysis';
 export * from './adminOrderManage';
 export * from './adminClearanceService';
 export * from './adminCustomerRelation';
+export * from './adminAgent';
+export * from './adminTrade';
+export * from './platformParam';
