@@ -12,3 +12,4 @@ export * from './adminCustomerRelation';
 export * from './adminAgent';
 export * from './adminTrade';
 export * from './platformParam';
+export * from './adminStatisticalAnalysis';
