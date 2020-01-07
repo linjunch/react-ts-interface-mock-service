@@ -2,7 +2,6 @@ import { StatusType, StepType, CheckStepType, CompanySortType } from '../global'
 
 // 商品列表接口
 export interface GoodsListParamsType {
-  ownerName?: string;
   supplierName?: string;
   factoryName?: string;
   goodsName?: string;

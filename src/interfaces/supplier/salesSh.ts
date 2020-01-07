@@ -8,7 +8,6 @@ export interface ShListParamsType {
   buyer?: string;
   shDateL?: string;
   shDateU?: string;
-  status?: Exclude<StatusType, 'deleted'>;
   step?: ShStepType;
   direction?: boolean;
   sort?: SortType;
@@ -46,7 +45,7 @@ export interface ShDetailResType {
   shDate?: string;
   bankName?: string;
   bankAccount?: string;
-  abstract?: string;
+  remark?: string;
   jhCode?: string;
   jhDate?: string;
   jhBankAccount?: string;

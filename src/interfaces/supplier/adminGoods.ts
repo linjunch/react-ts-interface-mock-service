@@ -52,6 +52,8 @@ export interface AdminGoodsFormParamsType {
   goodsCode: string;
   goodsName: string;
   goodsNameEn?: string;
+  factoryId: number;
+  factoryName: string;
   model?: string;
   unit: string;
   unitEn?: string;

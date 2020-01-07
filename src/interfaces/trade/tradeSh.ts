@@ -8,7 +8,6 @@ export interface ShListParamsType {
   buyer?: string;
   shDateL?: string;
   shDateU?: string;
-  status?: Exclude<StatusType, 'deleted'>;
   step?: ShStepType;
   direction?: boolean;
   sort?: SortType;
@@ -44,7 +43,7 @@ export interface ShDetailResType {
   shDate?: string;
   bankName?: string;
   bankAccount?: string;
-  abstract?: string;
+  remark?: string;
   jhCode?: string;
   jhDate?: string;
   jhBankAccount?: string;
@@ -65,7 +64,7 @@ export interface ShCreateFormType {
   remitter?: string;
   shDate?: string;
   bankId?: number;
-  abstract?: string;
+  remark?: string;
 }
 
 // 收汇返回修改接口

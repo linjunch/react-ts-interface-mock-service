@@ -1,7 +1,16 @@
-import { StatusType, StepType, SortType, SizeType, ServiceType, DeclareType } from '../global';
+import {
+  StatusType,
+  StepType,
+  SortType,
+  SizeType,
+  ServiceType,
+  DeclareType,
+  OrderType,
+} from '../global';
 
 // 订单列表接口
 export interface CustomerOrderListParamsType {
+  type: OrderType;
   piCode?: string;
   ownerName?: string;
   piDateL?: string;

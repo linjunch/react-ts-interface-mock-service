@@ -133,7 +133,7 @@ export async function adminSalesmenState(params: AdminSalesmenStateParamsType) {
   return request(
     `/api/trade/admin/supplier/${supplierToken}/salesman/${salesmanToken}/state?${stringify(val)}`,
     {
-      method: 'POST',
+      method: 'PUT',
     },
   );
 }

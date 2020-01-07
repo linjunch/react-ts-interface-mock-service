@@ -102,7 +102,7 @@ export async function adminSalesmenState(params: AdminSalesmenStateParamsType) {
       val,
     )}`,
     {
-      method: 'POST',
+      method: 'PUT',
     },
   );
 }

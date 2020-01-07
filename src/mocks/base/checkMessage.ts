@@ -1,21 +1,13 @@
 import { Request, Response } from 'express';
+import { mockItem, MockDataSourceType } from './../utils/index';
 
 const checkMessage = (req: Request, res: Response) => {
   const { companyType, trendsType, token } = req.params;
+  const dataSource: MockDataSourceType[] = [
+    { elem: ['SS', 'SA', 'TS', 'TC', 'TA', 'OS', 'OC', 'OA'] },
+  ];
   if (companyType && trendsType && token) {
-    res.send({
-      code: 200,
-      elem: {
-        SS: false,
-        SA: false,
-        TS: false,
-        TC: false,
-        TA: false,
-        OS: false,
-        OC: false,
-        OA: false,
-      },
-    });
+    res.send(mockItem(dataSource));
   }
 };
 

@@ -5,7 +5,8 @@ export interface DeclaresListParamsType {
   piCode?: string;
   tradeName?: string;
   ownerName?: string;
-  factoryName?: string;
+  declareDate?: string;
+  entryId?: string;
   isLock?: IsLockType;
   step?: DeclareStepType;
   direction?: boolean;
@@ -15,17 +16,18 @@ export interface DeclaresListParamsType {
 }
 export interface DeclaresListResType {
   id?: number;
-  declareCode?: string;
+  orderCode?: string;
   piCode?: string;
   piDate?: string;
   buyer?: string;
   tradeName?: string;
-  factoryName?: string;
   ownerName?: string;
-  ExDate?: string;
+  exDate?: string;
+  declareDate?: string;
+  entryId?: string;
   isLock?: boolean;
   status?: Exclude<StatusType, 'all'>;
-  step?: Exclude<StepType, 'all'>;
+  step?: Exclude<DeclareStepType, 'all'>;
 }
 
 // 关单详情接口

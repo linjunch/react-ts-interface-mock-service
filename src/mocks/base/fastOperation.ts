@@ -1,22 +1,15 @@
 import { Request, Response } from 'express';
 import mockjs from 'mockjs';
+import { mockItem, mockList, MockDataSourceType } from './../utils/index';
 
 const login = (req: Request, res: Response) => {
   const { companyType } = req.params;
   const { account } = req.body;
+  const dataSource: MockDataSourceType[] = [
+    { elem: ['account', 'imageUrl', 'root', 'userName', 'defaultView', 'roleId'] },
+  ];
   if (companyType && account) {
-    res.send(
-      mockjs.mock({
-        code: 200,
-        elem: {
-          account,
-          imageUrl: '@string',
-          role: '@string',
-          root: true,
-          userName: '@string',
-        },
-      }),
-    );
+    res.send(mockItem(dataSource));
   }
 };
 
@@ -26,11 +19,17 @@ const register = (req: Request, res: Response) => {
   if (companyType && source) {
     const { account, password, company } = req.body;
     if (account && password && company) {
-      res.send({
-        account,
-        password,
-        company,
-      });
+      res.send(
+        mockjs.mock({
+          account: 'string',
+          company: {
+            cellphone: 'string',
+            companyName: 'string',
+            contacts: 'string',
+          },
+          password: 'string',
+        }),
+      );
     }
   }
 };
@@ -46,7 +45,7 @@ const memberDetail = (req: Request, res: Response) => {
           imageUrl: '@string',
           name: '@string',
           nameEn: '@string',
-          "sex| 1": [0, 1],
+          'sex| 1': [0, 1],
           birthday: '@string',
           cellphone: '@string',
           cellphoneNotice: true,

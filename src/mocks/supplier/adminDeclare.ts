@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
-const declaresList = (req: Request, res: Response) => {
+const declareList = (req: Request, res: Response) => {
   const { size, page } = req.query;
   res.send(
     mockjs.mock({
@@ -15,9 +15,10 @@ const declaresList = (req: Request, res: Response) => {
           piDate: '@date(yyyy-MM-dd)',
           buyer: '@string',
           tradeName: '@string',
-          factoryName: '@string',
           ownerName: '@string',
-          ExDate: '@datetime',
+          exDate: '@datetime',
+          declareDate: '@datetime',
+          entryId: '@string',
           isLock: false,
           status: 'enabled',
           step: 'draft',
@@ -30,7 +31,7 @@ const declaresList = (req: Request, res: Response) => {
   );
 };
 
-const declaresDetail = (req: Request, res: Response) => {
+const declareDetail = (req: Request, res: Response) => {
   const { declareToken } = req.params;
   if (declareToken) {
     res.send(
@@ -120,7 +121,7 @@ const declaresDetail = (req: Request, res: Response) => {
   }
 };
 
-const declaresStep = (req: Request, res: Response) => {
+const declareStep = (req: Request, res: Response) => {
   const { declareToken, declareStep } = req.params;
   if (declareToken && declareStep) {
     res.send(
@@ -132,7 +133,7 @@ const declaresStep = (req: Request, res: Response) => {
   }
 };
 
-const declaresGoodsList = (req: Request, res: Response) => {
+const declareGoodsList = (req: Request, res: Response) => {
   const { declareToken } = req.params;
   if (declareToken) {
     res.send(
@@ -169,8 +170,8 @@ const declaresGoodsList = (req: Request, res: Response) => {
 };
 
 export default {
-  'GET /api/supplier/admin/declares': declaresList,
-  'GET /supplier/admin/declare/:declareToken/detail': declaresDetail,
-  'PUT /supplier/admin/declare/:declareToken/step/:declareStep': declaresStep,
-  'GET /supplier/admin/declare/:declareToken/goodses': declaresGoodsList,
+  'GET /api/supplier/admin/declares': declareList,
+  'GET /supplier/admin/declare/:declareToken/detail': declareDetail,
+  'PUT /supplier/admin/declare/:declareToken/step/:declareStep': declareStep,
+  'GET /supplier/admin/declare/:declareToken/goodses': declareGoodsList,
 };
