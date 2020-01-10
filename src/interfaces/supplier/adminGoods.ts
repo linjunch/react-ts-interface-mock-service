@@ -22,8 +22,8 @@ export interface AdminGoodsListResType {
   insDate?: string;
   model?: string;
   imgUrl?: string;
-  status?: Exclude<StatusType, 'all'>;
-  step?: Exclude<CheckStepType, 'all'>;
+  status?: StatusType;
+  step?: CheckStepType;
 }
 // 商品详情接口
 export interface AdminGoodsDetailParamsType {
@@ -44,8 +44,8 @@ export interface AdminGoodsDetailResType {
   goodsPrice?: number;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
-  step?: Exclude<CheckStepType, 'all'>;
+  status?: StatusType;
+  step?: CheckStepType;
 }
 // pubilc:商品表单接口
 export interface AdminGoodsFormParamsType {

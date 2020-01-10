@@ -1,4 +1,4 @@
-import { IsLockType, DeclareStepType, SortType, StatusType, StepType } from '../global';
+import { DeclareStepType, SortType, StatusType, StepType } from '../global';
 
 // 关单列表接口
 export interface DeclaresListParamsType {
@@ -7,7 +7,7 @@ export interface DeclaresListParamsType {
   ownerName?: string;
   declareDate?: string;
   entryId?: string;
-  isLock?: IsLockType;
+  isLock?: boolean;
   step?: DeclareStepType;
   direction?: boolean;
   sort?: SortType;
@@ -26,8 +26,8 @@ export interface DeclaresListResType {
   declareDate?: string;
   entryId?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
-  step?: Exclude<DeclareStepType, 'all'>;
+  status?: StatusType;
+  step?: DeclareStepType;
 }
 
 // 关单详情接口
@@ -94,8 +94,8 @@ export interface DeclaresDetailResType {
   licenseList?: Array<LicenseListType>;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
-  declareStep?: Exclude<DeclareStepType, 'all'>;
+  status?: StatusType;
+  declareStep?: DeclareStepType;
 }
 export interface ContainerListtype {
   no?: number;

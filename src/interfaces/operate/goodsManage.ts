@@ -23,8 +23,8 @@ export interface GoodsListResType {
   insDate?: string;
   model?: string;
   imgUrl?: string;
-  status?: Exclude<StatusType, 'all'>;
-  step?: Exclude<CheckStepType, 'all'>;
+  status?: StatusType;
+  step?: CheckStepType;
 }
 // 商品详情接口
 export interface GoodsDetailParamsType {
@@ -45,8 +45,8 @@ export interface GoodsDetailResType {
   goodsPrice?: number;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  status?: StatusType;
+  checkStep?: CheckStepType;
 }
 // 商品审核接口
 export interface GoodsStepParamsType {

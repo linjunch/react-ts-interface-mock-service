@@ -13,7 +13,7 @@ export interface VoucherInfoType {
 export interface VoucherStatusType {
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   checkStep?: CheckStepType;
 }
 

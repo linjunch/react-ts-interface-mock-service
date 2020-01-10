@@ -23,8 +23,8 @@ export interface VoucherListResType {
   buyerName?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  status?: StatusType;
+  checkStep?: CheckStepType;
 }
 // 凭证详情接口
 export interface VoucherDetailParamsType {
@@ -43,8 +43,8 @@ export interface VoucherDetailResType {
   insUserL?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  status?: StatusType;
+  checkStep?: CheckStepType;
 }
 // 凭证审核接口
 export interface VoucherStepParamsType {

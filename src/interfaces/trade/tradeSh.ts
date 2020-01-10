@@ -24,7 +24,7 @@ export interface ShListResType {
   jhDate?: string;
   tradeName?: string;
   insDate?: string;
-  shStep?: Exclude<ShStepType, 'all'>;
+  shStep?: ShStepType;
 }
 
 // 收汇详情接口
@@ -154,7 +154,7 @@ export interface BankListResType {
   id?: number;
   bankName?: string;
   currency?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
 }
 
 // 银行创建接口

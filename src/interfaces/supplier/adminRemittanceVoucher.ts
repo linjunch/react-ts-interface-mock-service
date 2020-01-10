@@ -10,7 +10,7 @@ export interface AdminVouchersInfoParamsType {
   buyerName?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   checkStep?: CheckStepType;
 }
 

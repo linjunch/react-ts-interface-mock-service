@@ -30,7 +30,7 @@ export async function contractSign(params: ContractSignParamsType) {
 // 协议拒绝接口
 export async function contractRefuse(params: ContractRefuseParamsType) {
   const { contractToken } = params;
-  return request(`/api/supplier/admin/contract/${contractToken}/step/refuse`, {
+  return request(`/api/supplier/admin/contract/${contractToken}/step/reject`, {
     method: 'PUT',
   });
 }

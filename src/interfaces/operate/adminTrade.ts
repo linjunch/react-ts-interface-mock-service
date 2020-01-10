@@ -18,8 +18,8 @@ export interface EnsembleTradeListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  status?: StatusType;
+  checkStep?: CheckStepType;
 }
 // 综服企业详情接口
 export interface EnsembleTradeDetailParamsType {
@@ -46,7 +46,7 @@ export interface EnsembleTradeDetailResType {
   siteAddr?: string;
   isOwnSite?: boolean;
   siteInsDate?: string;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  checkStep?: CheckStepType;
 }
 // 综服企业创建接口
 export interface EnsembleTradeCreateParamsType {
@@ -68,7 +68,7 @@ export interface EnsembleTradeCreateResType {
 // 综服企业状态接口
 export interface EnsembleTradeStateParamsType {
   tradeToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 export interface EnsembleTradeStateResType {
   token: number;

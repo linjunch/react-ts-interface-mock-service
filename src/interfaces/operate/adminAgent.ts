@@ -17,7 +17,7 @@ export interface AgentListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
 }
 // 申报单位详情接口
 export interface AgentDetailParamsType {
@@ -35,7 +35,7 @@ export interface AgentDetailResType {
   cellphone?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
 }
 // 申报单位创建接口
 export interface AgentCreateParamsType {
@@ -77,7 +77,7 @@ export interface AgentChangeResType {
 // 申报单位状态接口
 export interface AgentStateParamsType {
   agentToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 export interface AgentStateResType {
   token: number;

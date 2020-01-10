@@ -3,7 +3,7 @@ export type CompanyType = 'supplier' | 'trade' | 'operator';
 export type TrendsType = RecordType;
 export type SourceType = 'NONE' | 'ESR_TRADE' | 'AH_SITE' | 'FS_SHARE';
 export type DefaultViewType = 'SS' | 'SA' | 'TS' | 'TC' | 'TA' | 'OS' | 'OC' | 'OA';
-export type StatusType = 'all' | 'enabled' | 'disabled' | 'deleted';
+export type StatusType = 'enabled' | 'disabled' | 'deleted';
 export type SortType = 'createDate' | 'piDate';
 export type GoodsSortType = 'insDate' | 'goodsCode';
 export type CompanySortType = GoodsSortType;
@@ -12,14 +12,13 @@ export type ServiceType = 'declareService' | 'traditionService' | 'newService' ;
 export type DeclareType = 'esrDeclare' | 'otherDeclare';
 export type SizeType = '20GP' | '40GP' | '40HQ' | '45HQ' | '散货';
 
-export type StepType = 'all' | 'draft' | 'send' | 'accept' | 'reject' | 'container' | 'return' | 'check' | 'pass' | 'refuse';
-export type CheckStepType = 'all' | 'draft' | 'check' | 'pass' | 'return' | 'reject';
-export type ShStepType = 'all'|'draft'|'shed'|'return'|'jhed'|'pass'|'affirm'|'reaffirm'|'verify';
+export type StepType = 'draft' | 'send' | 'accept' | 'reject' | 'container' | 'return' | 'check' | 'pass' | 'refuse';
+export type CheckStepType = 'draft' | 'check' | 'pass' | 'return' | 'reject';
+export type ShStepType = 'draft'|'shed'|'return'|'jhed'|'pass'|'affirm'|'reaffirm'|'verify';
 export type ContractStepType = 'draft'|'send'|'reject'|'censor'|'check'|'pass'|'refuse';
-export type DeclareStepType = 'all' | 'draft' | 'check' | 'return' | 'confirm' | 'withdraw' | 'declare' | 'declaring' | 'pass' | 'clearance' | 'invoice' | 'drawbacking' | 'finish';
+export type DeclareStepType = 'draft' | 'check' | 'return' | 'confirm' | 'withdraw' | 'declare' | 'declaring' | 'pass' | 'clearance' | 'invoice' | 'drawbacking' | 'finish';
 export type OrderStepType = 'container' | 'reject' | 'check' | 'return' |'refuse' | 'pass' | 'finish' | 'convert' ;
 
-export type IsLockType = 'all'|'true'|'false';
 export type DownloadType = 'packing'|'template'|'tpl1'|'tpl2';
 export type CompanyModeType = 'production'|'trade';
 export type CustomerType = 'customer' | 'supplier';

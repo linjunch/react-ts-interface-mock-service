@@ -16,7 +16,7 @@ export async function adminGoodsList(params: AdminGoodsListParamsType) {
 // 商品详情接口
 export async function adminGoodsDetail(params: AdminGoodsDetailParamsType) {
   const { goodsToken } = params;
-  return request(`/api/supplier/admin/goods/${goodsToken}`);
+  return request(`/api/supplier/admin/goods/${goodsToken}/detail`);
 }
 
 // 商品创建接口

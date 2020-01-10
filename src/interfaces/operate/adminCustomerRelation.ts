@@ -65,7 +65,7 @@ export interface AdminFactoryListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 生产单位详情接口
@@ -86,7 +86,7 @@ export interface AdminFactoryDetailResType {
   cellphone?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 生产单位锁接口
@@ -117,7 +117,7 @@ export interface AdminOwnerListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 销售单位详情接口
@@ -145,7 +145,7 @@ export interface AdminOwnerDetailResType {
   ownerType?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 销售单位锁接口
@@ -175,7 +175,7 @@ export interface AdminTradeListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 自营发货人详情接口
@@ -195,7 +195,7 @@ export interface AdminTradeDetailResType {
   cellphone?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 协议列表接口
@@ -221,7 +221,7 @@ export interface AdminContractListResType {
   effectiveDate?: string;
   expiryDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: ContractStepType;
 }
 // 协议详情接口
@@ -262,7 +262,7 @@ export interface AdminContractDetailResType {
   insUser?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   contractStep?: ContractStepType;
 }
 // 客户指派列表接口

@@ -13,7 +13,7 @@ export async function goodsList(params: GoodsListParamsType) {
 // 商品详情接口
 export async function goodsDetail(params: GoodsDetailParamsType) {
   const { goodsToken } = params;
-  return request(`/api/operator/service/goods/${goodsToken}`);
+  return request(`/api/operator/service/goods/${goodsToken}/detail`);
 }
 // 商品审核接口
 export async function goodsStep(params: GoodsStepParamsType) {

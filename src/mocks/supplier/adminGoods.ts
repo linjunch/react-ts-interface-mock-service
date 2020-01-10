@@ -85,7 +85,7 @@ const adminGoodsChange = (req: Request, res: Response) => {
 
 export default {
   'GET /api/supplier/admin/goodses': adminGoodsList,
-  'GET /api/supplier/admin/goods/:goodsToken': adminGoodsDetail,
+  'GET /api/supplier/admin/goods/:goodsToken/detail': adminGoodsDetail,
   'POST /supplier/admin/goods': adminGoodsCreate,
   'PUT /supplier/admin/goods/:goodsToken': adminGoodsChange,
 };

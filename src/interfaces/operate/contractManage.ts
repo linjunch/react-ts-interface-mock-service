@@ -32,7 +32,7 @@ export interface ContractListResType {
   effectiveDate?: string;
   expiryDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: ContractStepType;
 }
 
@@ -74,7 +74,7 @@ export interface ContractDetailResType {
   insUser?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   contractStep?: ContractStepType;
 }
 

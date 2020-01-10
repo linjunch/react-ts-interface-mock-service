@@ -32,8 +32,8 @@ export interface CustomerOrderListResType {
   insUser?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
-  step?: Exclude<StepType, 'all'>;
+  status?: StatusType;
+  step?: StepType;
 }
 
 // 订单详情接口
@@ -82,8 +82,8 @@ export interface CustomerOrderDetailResType {
   insUser?: string;
   createDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
-  step?: Exclude<StepType, 'all'>;
+  status?: StatusType;
+  step?: StepType;
 }
 export interface CustomerOrderDetailListType {
   no?: number;

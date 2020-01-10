@@ -22,7 +22,7 @@ export interface RoleListResType {
   roleName?: string;
   isRoot?: boolean;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
 }
 
 // 角色详情接口
@@ -39,7 +39,7 @@ export interface RoleDetailResType {
   insDate?: string;
   sort?: number;
   isRoot?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
 }
 
 // 角色创建接口
@@ -79,7 +79,7 @@ export interface RoleChangeResType {
 export interface RoleStateParamsType {
   companyType: CompanyType;
   roleToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 
 export interface RoleStateResType {
@@ -103,7 +103,7 @@ export interface AdminFormType {
   qq?: string;
   position?: string;
   roleId?: number;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
 }
 
 // 管理员列表接口
@@ -159,7 +159,7 @@ export interface AdminDetailResType {
   qq?: string;
   position?: string;
   roleId?: number;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
 }
 
 // 管理员创建接口
@@ -194,7 +194,7 @@ export interface AdminChangeResType {
 export interface AdminStateParamsType {
   companyType: CompanyType;
   managerToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 
 export interface AdminStateResType {

@@ -379,7 +379,7 @@ export default {
   'GET /api/supplier/admin/factory/:factoryToken/salesmen': factorySalesmenList,
   'POST /api/supplier/admin/factory/:factoryToken/salesman/:salesmanToken': factorySalesmenCreate,
   'POST /api/supplier/admin/factory/:factoryToken/salesman/:salesmanToken/state': factorySalesmenState,
-  'DELETE /api/supplier/admin/factory/:factoryToken/salesman/:salesmanToken': factorySalesmenDelete,
+  'DELETE /api/supplier/admin/factory/:factoryToken/salesman/:salesmanToken/delete': factorySalesmenDelete,
   'GET /api/supplier/admin/owners': ownerList,
   'GET /api/supplier/admin/owner/:ownerToken/detail': ownerDetail,
   'POST /api/supplier/admin/owner': ownerCreate,

@@ -64,7 +64,7 @@ export interface FactoryListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 生产单位详情接口
@@ -85,7 +85,7 @@ export interface FactoryDetailResType {
   cellphone?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 生产单位审核接口
@@ -117,7 +117,7 @@ export interface OwnerListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 销售单位详情接口
@@ -145,7 +145,7 @@ export interface OwnerDetailResType {
   ownerType?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 销售单位审核接口
@@ -176,7 +176,7 @@ export interface TradeListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 自营发货人详情接口
@@ -196,7 +196,7 @@ export interface TradeDetailResType {
   cellphone?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 自营发货人审核接口

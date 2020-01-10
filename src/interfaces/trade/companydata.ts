@@ -45,7 +45,7 @@ export interface InfoDetailResType {
   siteAddr?: string;
   isOwnSite?: boolean;
   siteInsDate?: string;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  checkStep?: CheckStepType;
 }
 
 // 认证信息修改接口

@@ -49,7 +49,7 @@ export async function orderChange(params: OrderChangeParamsType) {
 // 唛头修改接口
 export async function shippingMarks(params: ShippingMarksParamsType) {
   const { orderToken, container } = params;
-  return request(`/api/supplier/sales/order/${orderToken}/step/container`, {
+  return request(`/api/supplier/sales/order/${orderToken}/mark`, {
     method: 'PUT',
     data: container,
   });

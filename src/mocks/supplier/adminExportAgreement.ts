@@ -106,5 +106,5 @@ export default {
   'GET /api/supplier/admin/contracts': contractList,
   'GET /api/supplier/admin/contract/:contractToken/detail': contractDetail,
   'PUT /api/supplier/admin/contract/:contractToken/step/sign': contractSign,
-  'PUT /api/supplier/admin/contract/:contractToken/step/refuse': contractRefuse,
+  'PUT /api/supplier/admin/contract/:contractToken/step/reject': contractRefuse,
 };

@@ -16,7 +16,7 @@ interface FactoryOwnersPublicType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 
@@ -169,7 +169,7 @@ export interface ContractListResType {
   effectiveDate?: string;
   expiryDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: ContractStepType;
 }
 
@@ -198,7 +198,7 @@ export interface ContractDetailResType extends Exclude<ContractPublicType, 'bank
   insUser?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   contractStep?: ContractStepType;
 }
 

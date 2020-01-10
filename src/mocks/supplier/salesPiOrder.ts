@@ -395,7 +395,7 @@ export default {
   'GET /api/supplier/sales/order/:orderToken/detail': orderDetail,
   'POST /api/supplier/sales/order': orderCreate,
   'PUT /api/supplier/sales/order/:orderToken': orderChange,
-  'PUT /api/supplier/sales/order/:orderToken/step/container': shippingMark,
+  'PUT /api/supplier/sales/order/:orderToken/mark': shippingMark,
   'GET /api/supplier/sales/order/:orderToken/downlaod': downlaod,
   'GET /api/supplier/sales/order/:orderToken/goodses': goodsList,
   'POST /api/supplier/sales/order/:orderToken/goods': goodsCreate,

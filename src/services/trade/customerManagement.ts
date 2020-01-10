@@ -100,7 +100,7 @@ export async function adminVisitList(params: AdminVisitListParamsType) {
 // 客户拜访详情接口
 export async function adminVisitDetail(params: AdminVisitDetailParamsType) {
   const { visitToken } = params;
-  return request(`/api/trade/admin/visit/${visitToken}`);
+  return request(`/api/trade/admin/visit/${visitToken}/detail`);
 }
 
 // 客户备注列表接口

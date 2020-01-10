@@ -179,7 +179,7 @@ const contactChange = (req: Request, res: Response) => {
 
 export default {
   'GET /api/trade/sales/:customerType/visits': visitList,
-  'GET /api/trade/sales/visit/:visitToken': visitDetail,
+  'GET /api/trade/sales/visit/:visitToken/detail': visitDetail,
   'POST /api/trade/sales/:customerType/visit': visitCreate,
   'GET /api/trade/sales/:customerType/remarks': potentialCustomersList,
   'POST /api/trade/sales/:customerType/remark': potentialCustomersCreate,

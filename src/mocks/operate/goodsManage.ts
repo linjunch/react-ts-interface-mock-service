@@ -74,6 +74,6 @@ const goodsStep = (req: Request, res: Response) => {
 
 export default {
   'GET /api/operator/service/goodses': goodsList,
-  'GET /api/operator/service/goods/:goodsToken': goodsDetail,
+  'GET /api/operator/service/goods/:goodsToken/detail': goodsDetail,
   'PUT /api/operator/service/goods/:goodsToken/step/:checkStep': goodsStep,
 };

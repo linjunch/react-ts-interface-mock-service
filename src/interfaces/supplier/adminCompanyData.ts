@@ -19,7 +19,7 @@ interface PublicListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 
@@ -37,7 +37,7 @@ interface PublicElemsType {
 interface PublicDetailType {
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 
@@ -114,7 +114,7 @@ export interface TradeChangeResType {
 // 自营发货人状态接口
 export interface TradeStateParamsType {
   tradeToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 export interface TradeStateResType {
   token: number;
@@ -181,7 +181,7 @@ export interface FactoryChangeResType {
 // 生产单位状态接口
 export interface FactoryStateParamsType {
   factoryToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 export interface FactoryStateResType {
   token: number;
@@ -304,7 +304,7 @@ export interface OwnerChangeResType {
 // 销售单位状态接口
 export interface OwnerStateParamsType {
   ownerToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 export interface OwnerStateResType {
   token: number;

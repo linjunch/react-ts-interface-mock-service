@@ -20,7 +20,7 @@ export async function visitList(params: VisitListParamsType) {
 // 客户拜访详情接口
 export async function visitDetail(params: VisitDetailParamsType) {
   const { visitToken } = params;
-  return request(`/api/trade/sales/visit/${visitToken}`);
+  return request(`/api/trade/sales/visit/${visitToken}/detail`);
 }
 
 // 客户拜访创建接口

@@ -72,7 +72,7 @@ export interface OrderListResType {
   ownerName?: string;
   insDate?: string;
   isLock?: boolean;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: StepType;
 }
 

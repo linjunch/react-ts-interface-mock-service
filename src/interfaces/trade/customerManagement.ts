@@ -66,7 +66,7 @@ export interface AdminFactoryListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 
@@ -88,7 +88,7 @@ export interface AdminFactoryDetailResType {
   cellphone?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 
@@ -112,7 +112,7 @@ export interface AdminOwnerListResType {
   telephone?: string;
   cellphone?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 // 销售单位详情接口
@@ -140,7 +140,7 @@ export interface AdminOwnerDetailResType {
   ownerType?: string;
   insUser?: string;
   insDate?: string;
-  status?: Exclude<StatusType, 'all'>;
+  status?: StatusType;
   step?: CheckStepType;
 }
 
@@ -216,7 +216,7 @@ export interface AdminContractDetailResType {
 // 协议状态接口
 export interface AdminContractStateParamsType {
   contractToken: number;
-  val: Exclude<StatusType, 'all'>;
+  val: StatusType;
 }
 export interface AdminContractStateResType {
   token: number;

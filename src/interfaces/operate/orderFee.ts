@@ -23,7 +23,7 @@ export interface OrderFeeListResType {
   feeType?: number;
   subtotal?: number;
   insDate?: string;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  checkStep?: CheckStepType;
   billCode?: string;
 }
 // 订单结算详情接口
@@ -47,7 +47,7 @@ export interface OrderFeeDetailResType {
   auditUser?: string;
   insUser?: string;
   insDate?: string;
-  checkStep?: Exclude<CheckStepType, 'all'>;
+  checkStep?: CheckStepType;
   billCode?: string;
 }
 // 订单结算创建接口

@@ -491,7 +491,7 @@ export default {
   'GET /api/trade/admin/supplier/:supplierToken/account': adminAccountDetail,
   'POST /api/trade/admin/supplier': adminSupplierCreate,
   'GET /api/trade/admin/supplier/visits': adminVisitList,
-  'GET /api/trade/admin/visit/:visitToken': adminVisitDetail,
+  'GET /api/trade/admin/visit/:visitToken/detail': adminVisitDetail,
   'GET /api/trade/admin/supplier/remarks': adminCustomerRemarks,
   'GET /api/trade/admin/supplier/contacts': adminContactList,
   'GET /api/trade/admin/supplier/:supplierToken/salesmen': adminSalesmenList,
