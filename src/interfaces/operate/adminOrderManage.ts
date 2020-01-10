@@ -118,12 +118,12 @@ export interface AdminContainerListParamsType {
 }
 export interface AdminContainerListResType {
   id?: number;
-  cNo?: number;
-  cCode?: string;
-  cType?: SizeType;
+  contNo?: number;
+  contCode?: string;
+  contType?: SizeType;
   weight?: number;
   seal?: string;
-  gCount?: number;
+  goodsCount?: number;
   packNo?: number;
   trayCount?: number;
   grossWet?: number;

@@ -126,7 +126,7 @@ export interface DeclaresGoodsListParamsType {
   declareToken: number;
 }
 export interface DeclaresGoodsListResType {
-  gNo?: number;
+  goodsNo?: number;
   hscode?: string;
   factoryName?: string;
   name?: string;

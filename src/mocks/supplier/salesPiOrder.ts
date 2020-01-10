@@ -312,12 +312,12 @@ const containerList = (req: Request, res: Response) => {
         elems: [
           {
             id: '@int',
-            cNo: '@integer(1, 100)',
-            cCode: '@string',
-            cType: '20GP',
+            contNo: '@integer(1, 100)',
+            contCode: '@string',
+            contType: '20GP',
             weight: '@float(0, 1000000, 2, 2)',
             seal: '@string',
-            gCount: '@float(0, 1000000, 2, 2)',
+            goodsCount: '@float(0, 1000000, 2, 2)',
             packNo: '@integer(1, 100000)',
             trayCount: '@integer(1, 100000)',
             grossWet: '@float(0, 1000000, 2, 2)',
@@ -354,8 +354,8 @@ const containerList = (req: Request, res: Response) => {
 const containerCreate = (req: Request, res: Response) => {
   const { orderToken } = req.params;
   const { submit } = req.query;
-  const { cNo, cCode, cType, goodsList } = req.body;
-  if (orderToken && submit && cNo && cCode && cType && goodsList[0]) {
+  const { contNo, contCode, contType, goodsList } = req.body;
+  if (orderToken && submit && contNo && contCode && contType && goodsList[0]) {
     res.send(
       mockjs.mock({
         code: 200,
@@ -367,8 +367,8 @@ const containerCreate = (req: Request, res: Response) => {
 
 const containerChange = (req: Request, res: Response) => {
   const { orderToken, containerToken } = req.params;
-  const { cNo, cCode, cType, goodsList } = req.body;
-  if (orderToken && containerToken && cNo && cCode && cType && goodsList[0]) {
+  const { contNo, contCode, contType, goodsList } = req.body;
+  if (orderToken && containerToken && contNo && contCode && contType && goodsList[0]) {
     res.send(
       mockjs.mock({
         code: 200,

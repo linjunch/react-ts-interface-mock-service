@@ -115,7 +115,7 @@ export interface AdminDeclareGoodsListParamsType {
   declareToken: number;
 }
 export interface AdminDeclareGoodsListResType {
-  gNo?: number;
+  goodsNo?: number;
   hscode?: string;
   factoryName?: string;
   name?: string;

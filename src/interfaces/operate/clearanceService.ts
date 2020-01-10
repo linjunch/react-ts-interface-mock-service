@@ -120,7 +120,7 @@ export interface DeclareGoodsListParamsType {
   declareToken: number;
 }
 export interface DeclareGoodsListResType {
-  gNo?: number;
+  goodsNo?: number;
   hscode?: string;
   factoryName?: string;
   name?: string;

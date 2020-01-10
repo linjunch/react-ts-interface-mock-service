@@ -236,12 +236,12 @@ export interface ContainerListParamsType {
 
 export interface ContainerListResType {
   id?: number;
-  cNo?: number;
-  cCode?: string;
-  cType?: SizeType;
+  contNo?: number;
+  contCode?: string;
+  contType?: SizeType;
   weight?: number;
   seal?: string;
-  gCount?: number;
+  goodsCount?: number;
   packNo?: number;
   trayCount?: number;
   grossWet?: number;
@@ -272,9 +272,9 @@ export interface ContainerListGoodsListType {
 
 // public : 装柜信息和货物信息
 export interface ContainersType {
-  cNo: number;
-  cCode: string;
-  cType: SizeType;
+  contNo: number;
+  contCode: string;
+  contType: SizeType;
   weight?: number;
   goodsList: GoodsListType;
   img1Url?: string;

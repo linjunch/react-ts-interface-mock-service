@@ -138,12 +138,12 @@ const containerList = (req: Request, res: Response) => {
         elems: [
           {
             id: '@integer',
-            cNo: '@integer(1, 100)',
-            cCode: '@string',
-            cType: '20GP',
+            contNo: '@integer(1, 100)',
+            contCode: '@string',
+            contType: '20GP',
             weight: '@float(0, 1000000, 2, 2)',
             seal: '@string',
-            gCount: '@float(0, 1000000, 2, 2)',
+            goodsCount: '@float(0, 1000000, 2, 2)',
             packNo: '@integer(1, 100000)',
             trayCount: '@integer(1, 100000)',
             grossWet: '@float(0, 1000000, 2, 2)',

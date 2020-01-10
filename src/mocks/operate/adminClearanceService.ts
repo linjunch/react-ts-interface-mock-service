@@ -135,7 +135,7 @@ const adminGoodsList = (req: Request, res: Response) => {
         elemTotal: 5,
         elems: [
           {
-            gNo: '@integer',
+            goodsNo: '@integer',
             hscode: '@string',
             factoryName: '@string',
             name: '@string',
