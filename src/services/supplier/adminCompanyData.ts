@@ -139,7 +139,7 @@ export async function factorySalesmenState(params: FactorySalesmenStateParamsTyp
 // 生产单位指派删除接口
 export async function FactorySalesmenDetete(params: FactorySalesmenDeteteParamsType) {
   const { factoryToken, salesmanToken } = params;
-  return request(`/api/supplier/admin/factory/${factoryToken}/salesman/${salesmanToken}/delete`, {
+  return request(`/api/supplier/admin/factory/${factoryToken}/salesman/${salesmanToken}`, {
     method: 'DELETE',
   });
 }

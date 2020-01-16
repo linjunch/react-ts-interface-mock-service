@@ -33,4 +33,4 @@ export type CustomerRelationType = 'being' | 'history'  ;
 export type LockStatusType = 'lock' | 'unlock'  ;
 export type OrderFeeAttrtype = 'feeType' | 'trade' | 'owner' | 'supplier' ;
 export type AnalysisType = 'serviceType' | 'mode' | 'province' | 'city'| 'district'| 'salesman' ;
-export type OrderType = 'own' | 'other'  ;
+export type OrderType = 'own' | 'other' ;
