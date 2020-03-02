@@ -1,13 +1,13 @@
-import { SortType, billType, billStepType } from '../global';
+import { SortType, BillType, BillStepType } from '../global';
 
 // 订单结算列表接口
 export interface BillListParamsType {
   billCode?: string;
   supplierName?: string;
-  billType?: billType;
+  billType?: BillType;
   dateL?: string;
   dateU?: string;
-  billStep?: billStepType;
+  billStep?: BillStepType;
   direction?: boolean;
   sort?: SortType;
   page?: number;
@@ -22,7 +22,7 @@ export interface BillListResType {
   billType: number;
   total: number;
   insDated: string;
-  billStep: billStepType;
+  billStep: BillStepType;
 }
 
 // 订单结算详情接口
@@ -35,7 +35,7 @@ export interface BillDetailResType {
   supplierName: string;
   orderId: number;
   orderCode: string;
-  billType: billType;
+  billType: BillType;
   serviceCode: string;
   serviceFee: number;
   discount?: number;
@@ -49,7 +49,7 @@ export interface BillDetailResType {
   auditUser: string;
   insUser: string;
   insDate: string;
-  billStep: billStepType;
+  billStep: BillStepType;
 }
 
 // 订单结算创建接口
@@ -63,7 +63,7 @@ export interface BillCreateFormType {
   supplierName: string;
   orderId: number;
   orderCode: string;
-  billType: billType;
+  billType: BillType;
   serviceCode: string;
   serviceFee: number;
   discount?: number;
@@ -90,7 +90,7 @@ export interface BillChangeFormType {
   supplierName: string;
   orderId: number;
   orderCode: string;
-  billType: billType;
+  billType: BillType;
   serviceCode: string;
   serviceFee: number;
   discount?: number;
@@ -108,7 +108,7 @@ export interface BillChangeResType {
 // 订单结算进度接口
 export interface BillStepParamsType {
   billToken: number;
-  billStep: Exclude<billStepType, 'draft' | 'check'>;
+  billStep: Exclude<BillStepType, 'draft' | 'check'>;
 }
 export interface BillStepResType {
   token: number;

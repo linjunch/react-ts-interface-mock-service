@@ -1,4 +1,4 @@
-import { StatusType, StepType, CheckStepType, CompanySortType } from '../global';
+import { StatusType, CheckStepType, CompanySortType } from '../global';
 
 // 商品列表接口
 export interface GoodsListParamsType {

@@ -1,4 +1,4 @@
-import { ShStepType, StatusType, SortType } from '../global';
+import { ShStepType, SortType } from '../global';
 
 // 收汇列表接口
 export interface ShListParamsType {
