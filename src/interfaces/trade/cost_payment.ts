@@ -54,7 +54,6 @@ export interface PaymentCreateParamsType {
   payment: PaymentCreateFormType;
 }
 export interface PaymentCreateFormType {
-  paymentCode: string;
   shCode: string;
   ledgerCode: string;
   amt: number;
