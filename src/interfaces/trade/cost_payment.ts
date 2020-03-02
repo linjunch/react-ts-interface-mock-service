@@ -54,8 +54,8 @@ export interface PaymentCreateParamsType {
   payment: PaymentCreateFormType;
 }
 export interface PaymentCreateFormType {
-  shCode: string;
-  ledgerCode: string;
+  shCode?: string;
+  ledgerCode?: string;
   amt: number;
   deduct: number;
   payable: number;
