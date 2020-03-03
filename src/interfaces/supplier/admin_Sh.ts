@@ -1,7 +1,7 @@
 import { ShStepType, SortType } from '../global';
 
 // 收汇列表接口
-export interface ShListParamsType {
+export interface AdminShListParamsType {
   shCode?: string;
   tradeName?: string;
   bankName?: string;
@@ -16,7 +16,7 @@ export interface ShListParamsType {
   page?: number;
   size?: number;
 }
-export interface ShListResType {
+export interface AdminShListResType {
   id?: number;
   shCode?: string;
   amount?: number;
@@ -30,10 +30,10 @@ export interface ShListResType {
 }
 
 // 收汇详情接口
-export interface ShDetailParamsType {
+export interface AdminShDetailParamsType {
   shToken: number;
 }
-export interface ShDetailResType {
+export interface AdminShDetailResType {
   id?: number;
   tradeName?: string;
   shCode?: string;

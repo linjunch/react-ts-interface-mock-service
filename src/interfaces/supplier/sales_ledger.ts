@@ -1,12 +1,7 @@
-import {
-  StatusType,
-  LedgerStepType,
-  SortType,
-  ServiceType,
-} from '../global';
+import { StatusType, LedgerStepType, LedgerSortType, ServiceType } from '../global';
 
 // 退税结算列表接口
-export interface AdminLedgerListParamsType {
+export interface LedgerListParamsType {
   exDateL?: string;
   exDateU?: string;
   insDateL?: string;
@@ -15,11 +10,11 @@ export interface AdminLedgerListParamsType {
   status?: Exclude<StatusType, 'deleted'>;
   step?: LedgerStepType;
   direction?: boolean;
-  sort?: SortType;
+  sort?: LedgerSortType;
   page?: number;
   size?: number;
 }
-export interface AdminLedgerListResType {
+export interface LedgerListResType {
   id?: number;
   ledgerCode?: string;
   ownerName?: string;
@@ -32,10 +27,10 @@ export interface AdminLedgerListResType {
 }
 
 // 退税结算详情接口
-export interface AdminLedgerDetailParamsType {
+export interface LedgerDetailParamsType {
   ledgerToken: number;
 }
-export interface AdminLedgerDetailResType {
+export interface LedgerDetailResType {
   ledgerCode?: string;
   orderCode?: string;
   cusContrNo?: string;
@@ -64,10 +59,10 @@ export interface AdminLedgerDetailResType {
 }
 
 // 商品列表接口
-export interface AdminLedgerGoodsListParamsType {
+export interface LedgerGoodsListParamsType {
   ledgerToken: number;
 }
-export interface AdminLedgerGoodsListResType {
+export interface LedgerGoodsListResType {
   id?: number;
   ledgerCode?: string;
   goodsName?: string;
@@ -84,21 +79,21 @@ export interface AdminLedgerGoodsListResType {
 }
 
 // 收汇列表接口
-export interface AdminLedgerShListParamsType {
+export interface LedgerShListParamsType {
   ledgerToken: number;
   ledgerItemToken: number;
 }
-export interface AdminLedgerShListResType {
-  id?: number;
-  shCode?: string;
-  shDate?: string;
-  shUsdRate?: number;
-  exchRate?: number;
-  shAmt?: number;
-  shCnyAmt?: number;
-  goodsAmt?: number;
-  noTaxAmt?: number;
-  drawbackAmt?: number;
-  fee?: number;
-  subsidy?: number;
+export interface LedgerShListResType {
+  id: number;
+  shCode: string;
+  shDate: string;
+  shUsdRate: number;
+  exchRate: number;
+  shAmt: number;
+  shCnyAmt: number;
+  goodsAmt: number;
+  noTaxAmt: number;
+  drawbackAmt: number;
+  fee: number;
+  subsidy: number;
 }

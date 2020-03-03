@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
 // 货款结账列表接口
-const adminPaymentList = (req: Request, res: Response) => {
+const paymentList = (req: Request, res: Response) => {
   const { page, size } = req.query;
   res.send(
     mockjs.mock({
@@ -27,7 +27,7 @@ const adminPaymentList = (req: Request, res: Response) => {
 };
 
 // 货款结账详情接口
-const adminPaymentDetail = (req: Request, res: Response) => {
+const paymentDetail = (req: Request, res: Response) => {
   const { paymentToken } = req.params;
   paymentToken &&
     res.send(
@@ -50,7 +50,7 @@ const adminPaymentDetail = (req: Request, res: Response) => {
 };
 
 // 结账明细列表接口
-const adminPaymentItemList = (req: Request, res: Response) => {
+const paymentItemList = (req: Request, res: Response) => {
   const { paymentToken } = req.params;
   paymentToken &&
     res.send(
@@ -70,7 +70,7 @@ const adminPaymentItemList = (req: Request, res: Response) => {
 };
 
 export default {
-  'GET /api/supplier/admin/payments': adminPaymentList,
-  'GET /api/supplier/admin/payment/:paymentToken/detail': adminPaymentDetail,
-  'GET /api/supplier/admin/payment/:paymentToken/items': adminPaymentItemList,
+  'GET /api/supplier/sales/payments': paymentList,
+  'GET /api/supplier/sales/payment/:paymentToken/detail': paymentDetail,
+  'GET /api/supplier/sales/payment/:paymentToken/items': paymentItemList,
 };

@@ -6,6 +6,8 @@ export interface ShListParamsType {
   supplierName?: string;
   bankName?: string;
   buyer?: string;
+  amountL?: number;
+  amountU?: number;
   shDateL?: string;
   shDateU?: string;
   step?: ShStepType;

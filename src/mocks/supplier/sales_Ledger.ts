@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
 // 退税结算列表接口
-const adminledgerList = (req: Request, res: Response) => {
+const ledgerList = (req: Request, res: Response) => {
   const { page, size } = req.query;
   res.send(
     mockjs.mock({
@@ -29,7 +29,7 @@ const adminledgerList = (req: Request, res: Response) => {
 };
 
 // 退税结算详情接口
-const adminledgerDetail = (req: Request, res: Response) => {
+const ledgerDetail = (req: Request, res: Response) => {
   const { ledgerToken } = req.params;
   ledgerToken &&
     res.send(
@@ -67,7 +67,7 @@ const adminledgerDetail = (req: Request, res: Response) => {
 };
 
 // 商品列表接口
-const adminledgerGoodsList = (req: Request, res: Response) => {
+const ledgerGoodsList = (req: Request, res: Response) => {
   const { ledgerToken } = req.params;
   ledgerToken &&
     res.send(
@@ -96,7 +96,7 @@ const adminledgerGoodsList = (req: Request, res: Response) => {
 };
 
 // 收汇列表接口
-const adminledgerShList = (req: Request, res: Response) => {
+const ledgerShList = (req: Request, res: Response) => {
   const { ledgerToken, ledgerItemToken } = req.params;
   if (ledgerToken && ledgerItemToken) {
     res.send(
@@ -125,8 +125,8 @@ const adminledgerShList = (req: Request, res: Response) => {
 };
 
 export default {
-  'GET /api/supplier/admin/ledgers': adminledgerList,
-  'GET /api/supplier/admin/ledger/:ledgerToken/detail': adminledgerDetail,
-  'GET /api/supplier/admin/ledger/:ledgerToken/goodses': adminledgerGoodsList,
-  'GET /api/supplier/admin/ledger/:ledgerToken/goods/:ledgerItemToken/shs': adminledgerShList,
+  'GET /api/supplier/sales/ledgers': ledgerList,
+  'GET /api/supplier/sales/ledger/:ledgerToken/detail': ledgerDetail,
+  'GET /api/supplier/sales/ledger/:ledgerToken/goodses': ledgerGoodsList,
+  'GET /api/supplier/sales/ledger/:ledgerToken/goods/:ledgerItemToken/shs': ledgerShList,
 };
