@@ -16,6 +16,7 @@ export interface PaymentListParamsType {
 export interface PaymentListResType {
   id?: number;
   paymentCode?: string;
+  tradeName?: string;
   shCode?: string;
   ledgerCode?: string;
   insDate?: string;
@@ -29,6 +30,7 @@ export interface PaymentDetailParamsType {
 }
 export interface PaymentDetailResType {
   paymentCode?: string;
+  tradeName?: string;
   shCode?: string;
   ledgerCode?: string;
   amt?: number;

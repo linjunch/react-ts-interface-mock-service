@@ -12,6 +12,7 @@ const adminPaymentList = (req: Request, res: Response) => {
         {
           id: '@integer',
           paymentCode: '@string',
+          tradeName: '@string',
           shCode: '@string',
           ledgerCode: '@string',
           insDate: '@datetime',
@@ -35,6 +36,7 @@ const adminPaymentDetail = (req: Request, res: Response) => {
         code: 200,
         elem: {
           paymentCode: '@string',
+          tradeName: '@string',
           shCode: '@string',
           ledgerCode: '@string',
           amt: '@float(0, 100, 5, 5)',
