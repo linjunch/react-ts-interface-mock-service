@@ -4,6 +4,7 @@ import {
   VoucherListParamsType,
   VoucherDetailParamsType,
   VoucherCreateParamsType,
+  VoucherDeleteParamsType,
 } from '@/interfaces/supplier';
 
 // 凭证列表接口
@@ -23,5 +24,13 @@ export async function voucherCreate(params: VoucherCreateParamsType) {
   return request(`/api/supplier/sales/voucher?${stringify(submit)}`, {
     method: 'POST',
     data: order,
+  });
+}
+
+// 凭证删除接口
+export async function voucherDelete(params: VoucherDeleteParamsType) {
+  const { voucherToken } = params;
+  return request(`/api/supplier/sales/voucher/${voucherToken}`, {
+    method: 'Delete',
   });
 }

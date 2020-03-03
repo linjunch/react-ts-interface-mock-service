@@ -9,6 +9,7 @@ export interface VoucherListParamsType {
   remitDateL?: string;
   remitDateU?: string;
   status?: Exclude<StatusType, 'deleted'>;
+  step?: CheckStepType;
   direction?: boolean;
   sort?: SortType;
   page?: number;

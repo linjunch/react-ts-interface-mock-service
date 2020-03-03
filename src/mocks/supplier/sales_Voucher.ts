@@ -84,8 +84,24 @@ const voucherCreate = (req: Request, res: Response) => {
   }
 };
 
+// 凭证删除接口
+const voucherDelete = (req: Request, res: Response) => {
+  const {
+    params: { voucherToken },
+  } = req;
+  if (voucherToken) {
+    res.send(
+      mockjs.mock({
+        code: 200,
+        message: 'success',
+      }),
+    );
+  }
+};
+
 export default {
   'GET /api/supplier/sales/vouchers': voucherList,
   'GET /api/supplier/sales/voucher/:voucherToken/detail': voucherDetail,
   'POST /api/supplier/sales/voucher': voucherCreate,
+  'Delete /api/supplier/sales/voucher/:voucherToken': voucherDelete,
 };
