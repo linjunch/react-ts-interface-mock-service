@@ -1,7 +1,7 @@
 import { BillType, BillStepType, SortType } from '../global';
 
 // 订单结算列表接口
-export interface AdminBillListParamsType {
+export interface BillListParamsType {
   billCode?: string;
   billType?: BillType;
   dateL?: string;
@@ -12,7 +12,7 @@ export interface AdminBillListParamsType {
   page?: number;
   size?: number;
 }
-export interface AdminBillListResType {
+export interface BillListResType {
   id: number;
   billCode: string;
   orderCode: string;
@@ -24,10 +24,10 @@ export interface AdminBillListResType {
 }
 
 // 订单结算详情接口
-export interface AdminBillDetailParamsType {
+export interface BillDetailParamsType {
   billToken: number;
 }
-export interface AdminBillDetailResType {
+export interface BillDetailResType {
   billCode: string;
   supplierId: number;
   supplierName: string;
@@ -45,10 +45,10 @@ export interface AdminBillDetailResType {
 }
 
 // 结算明细列表接口
-export interface AdminBillItemListParamsType {
+export interface BillItemListParamsType {
   billToken: number;
 }
-export interface AdminBillItemListResType {
+export interface BillItemListResType {
   id: number;
   content: string;
   count: number;

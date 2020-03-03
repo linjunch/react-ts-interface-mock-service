@@ -3,6 +3,7 @@ export * from './sales_Voucher';
 export * from './sales_Sh';
 export * from './sales_Ledger';
 export * from './sales_Payment';
+export * from './sales_Bill';
 
 export * from './admin_Contract';
 export * from './admin_PiOrder';

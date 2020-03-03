@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import mockjs from 'mockjs';
 
 // 订单结算列表接口
-const adminBillList = (req: Request, res: Response) => {
+const billList = (req: Request, res: Response) => {
   const {
     query: { page, size },
   } = req;
@@ -30,7 +30,7 @@ const adminBillList = (req: Request, res: Response) => {
 };
 
 // 订单结算详情接口
-const adminBillDetail = (req: Request, res: Response) => {
+const billDetail = (req: Request, res: Response) => {
   const {
     params: { billToken },
   } = req;
@@ -59,7 +59,7 @@ const adminBillDetail = (req: Request, res: Response) => {
 };
 
 // 结算明细列表接口
-const adminBillItemList = (req: Request, res: Response) => {
+const billItemList = (req: Request, res: Response) => {
   const {
     params: { billToken },
   } = req;
@@ -87,7 +87,7 @@ const adminBillItemList = (req: Request, res: Response) => {
 };
 
 export default {
-  'GET /api/supplier/admin/bills': adminBillList,
-  'GET /api/supplier/admin/bill/:billToken/detail': adminBillDetail,
-  'GET /api/supplier/admin/bill/:billToken/items': adminBillItemList,
+  'GET /api/supplier/sales/bills': billList,
+  'GET /api/supplier/sales/bill/:billToken/detail': billDetail,
+  'GET /api/supplier/sales/bill/:billToken/items': billItemList,
 };
