@@ -1,4 +1,4 @@
-import {  DeclareStepType, SortType, StatusType, StepType } from '../global';
+import { DeclareStepType, SortType, StatusType, StepType } from '../global';
 
 // 关单列表接口
 export interface AdminDeclareListParamsType {
@@ -6,7 +6,9 @@ export interface AdminDeclareListParamsType {
   tradeName?: string;
   ownerName?: string;
   declareDate?: string;
+  exDate?: string;
   entryId?: string;
+  merchandiser?: string;
   isLock?: boolean;
   step?: DeclareStepType;
   direction?: boolean;
@@ -25,6 +27,7 @@ export interface AdminDeclareListResType {
   exDate?: string;
   declareDate?: string;
   entryId?: string;
+  merchandiser?: string;
   isLock?: boolean;
   status?: StatusType;
   step?: DeclareStepType;

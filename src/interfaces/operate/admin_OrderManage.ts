@@ -16,6 +16,7 @@ export interface AdminOrderListParamsType {
   tradeName?: string;
   ownerName?: string;
   factoryName?: string;
+  merchandiser?: string;
   insUser?: string;
   piDateL?: string;
   piDateU?: string;
@@ -34,6 +35,7 @@ export interface AdminOrderListResType {
   buyer?: string;
   tradeName?: string;
   ownerName?: string;
+  merchandiser?: string;
   insUser?: string;
   insDate?: string;
   isLock?: boolean;

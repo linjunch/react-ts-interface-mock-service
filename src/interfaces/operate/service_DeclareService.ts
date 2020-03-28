@@ -6,6 +6,7 @@ export interface DeclareListParamsType {
   tradeName?: string;
   ownerName?: string;
   declareDate?: string;
+  exDate?: string;
   entryId?: string;
   isLock?: boolean;
   step?: DeclareStepType;
